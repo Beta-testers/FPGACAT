@@ -1,0 +1,16 @@
+Description	Centipede RAM test H2/F2		
+Start		NEG	
+Stop		NEG	
+Clock		NEG	
+Start Address	0x0000		
+End Address	0x03FF		
+Delay	90		
+Stop to Start	TRUE		
+Clock to Phase2	TRUE		
+Start to A15	TRUE		
+NOP Mode	FALSE		
+Force Write	TRUE		
+Enable Address Counter	TRUE		
+Enable Data Counter	TRUE		
+Notes	Here you can check the address and data for reads and writes of the RAM. (H2,F2)
+Signal	Location	Pin	Signature

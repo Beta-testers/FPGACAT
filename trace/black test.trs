@@ -1,0 +1,72 @@
+[DESC]
+Draws small black rectangle inside larger white rectangle
+
+[SIGS]
+Z0
+
+[PROG]
+8040
+6804
+0100
+1E80
+0000
+0300
+1E00
+0000
+0000
+1D00
+0200
+0000
+8040
+6807
+013C
+5E1C
+0000
+63C8
+1D92
+8000
+0000
+BC38
+026E
+C000
+2000
+
+[ASMPROG]
+CNTR	64
+STAT	4,128
+VCTR	-384,256,0
+VCTR	768,0,0
+VCTR	0,-512,0
+VCTR	-768,0,0
+VCTR	0,512,0
+CNTR 64
+STAT	7,128
+VCTR	-484,316,2
+VCTR	968,0,3
+VCTR	0,-622,4
+VCTR	-968,0,5
+VCTR	0,622,6
+HALT
+
+[TIMETRACES]
+Z0	line	
+
+[ALLTRACES]
+Reference:	
+Reference:	
+Reference:	
+Reference:	
+Reference:	
+Reference:	
+
+[SACONFIG]
+Trace Count = 17891
+CLK = "VSMCLK"
+CLK H/L = TRUE
+Start H/L = FALSE
+Stop H/L = TRUE
+START = "HALT"
+STOP = ""
+Stop to Start = TRUE
+VG Type = "Analog Std"
+Reset before Trace = FALSE

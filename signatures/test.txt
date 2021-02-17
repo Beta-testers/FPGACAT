@@ -1,0 +1,22 @@
+Description	Test		
+Start	XX-1	NEG	
+Stop	YY-2	NEG	
+Clock	ZZ-3	NEG	
+Start Address	0x0000		
+End Address	0xFFFF		
+Delay	0		
+Stop to Start	TRUE		
+Clock to Phase2	TRUE		
+Start to A15	TRUE		
+NOP Mode	FALSE		
+Force Write	FALSE		
+Enable Address Counter	TRUE		
+Enable Data Counter	FALSE		
+Notes	Test Notes
+Notes	Another line of notes!
+InitSeq	Write	1234	FF
+InitSeq	Write	1235	01
+
+Signal	Location	Pin	Signature
+Test1	AA1	3	GGGG
+Test2	AA2	3	HHHH
