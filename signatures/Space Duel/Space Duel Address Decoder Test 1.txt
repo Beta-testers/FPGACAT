@@ -1,0 +1,33 @@
+Game	Space Duel		
+Description	Address Decoder Test 1		
+Start	A15	NEG	
+Stop	A15	NEG	
+Clock	Phase2	NEG	
+Stop to Start	TRUE		
+Clock to Phase2	TRUE		
+Enable addr counter	TRUE		
+Force Write	FALSE		
+Start to A15	TRUE		
+Signal	Location	Pin	Signature
+-	R2	2	7631
+-	R2	1	383A
+-	R3	6	4P0A
+-	R2	4	04UH
+-	R2	3	160U
+/VMEM	M9	/VMEM	12U3
+/ROM0	R1	/ROM0	CFHH
+/ROM1	N/P1	/ROM1	57HH
+/ROM2	M1	/ROM2	96F8
+/ROM3	K/L1	/ROM3	546U
+/ROM4	J1	/ROM4	755P
+/ROM	H3	10	5FU9
+/SINP1	K6	12	U14U
+/SINP2	K6	11	HF1A
+/EAROMRD	K6	10	U0HA
+/RAM0	P3	1	51FP
+RAM1	P3	2	6C23
+-	P3	3	587H
+-	P3	4	5AAC
+/IO0	P3	5	C787
+/IO1	P3	6	9UAP
+/IOS	R3	11	2828
