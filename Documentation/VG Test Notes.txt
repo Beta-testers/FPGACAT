@@ -4,7 +4,7 @@ This test resets the vector generator hardware by writing to the reset address.
 This does not run any vector state machine commands (no VGGO) so you will not see any pulse width information since HALT does not pulse.
 [VG Center]
 This runs the CENTER command then halts. Typical time is 89.6 us
-For AVG only (DVG does not have a CNTR command). 
+For AVG only (DVG does not have a CNTR command).
 This should reset the integrators and bring the beam to the center. Some hardware (maybe all) resets the integrators when the state machine is idle so the beam will already be centered.
 The Center Flag latch (E5-9 on Space Duel) is typically 84.65.
 If VG does not halt, loop this test and use the DATA probe to check these Normalization / Vector Timer Pulse widths:
@@ -31,6 +31,7 @@ Qa of fourth = 85us pos (M6-14)
 Qb of fourth = 85.1us pos (M6-13)
 Qc of fourth = 85.2us pos (M6-12)
 
+
 H5-6 = 21.15us neg
 L3-3 = 21.15us pos
 K4-12 = 2708us pos
@@ -50,9 +51,9 @@ Can also be used to test VCTR, which is 4.63us for Space Duel.
 This will draw a single short vector according to your inputs.
 For 15x15 vectors the time is 26.8us
 [VG DrawShort from Ram BIG]
-This is useful for testing the program counters.  
-It will create a certain number of copies of the drawshort commands which you can use to fill up the vector ram to check that the program counters are able to go all the way to the end.  You can start with a smaller number of copies and get bigger which will use more and more bits of the program counter. 
-For the AVG, there are 7 instructions in the drawshort BIG so there are 14 bytes in each instruction.  Battlezone has 4K vector memory so you can run 292 copies in drawshort BIG 
+This is useful for testing the program counters.
+It will create a certain number of copies of the drawshort commands which you can use to fill up the vector ram to check that the program counters are able to go all the way to the end.  You can start with a smaller number of copies and get bigger which will use more and more bits of the program counter.
+For the AVG, there are 7 instructions in the drawshort BIG so there are 14 bytes in each instruction.  Battlezone has 4K vector memory so you can run 292 copies in drawshort BIG
 For the DVG, 68 copies of the drawshort BIG is 2041 bytes, so it covers the whole RAM (68 is the max copies for asteroids, etc)
 [VG Draw Single Long Vec]
 Draw a single long vector according to your inputs.
@@ -77,23 +78,23 @@ This might be able to be used to test the outputs of the Vector Data Shifters. U
 Retest with 1365 for odd bits, time = ???us for zeros, ??? for ones
 Retest with 2730 for even bits, time = ???us for zeros, ??? for ones
 [VG JMP test RAM]
-This jumps around a few times to check the loading of the program counters.  
+This jumps around a few times to check the loading of the program counters.
 Typical 359.5us
 [VG JSR to address]
 This will JSR to a certain address which you have to know beforehand (typically in ROM).
 0x862 is the copyright in Asteroids
-0x9F8 is the character set in Battlezone 
+0x9F8 is the character set in Battlezone
 
-NOTE: The addresses for the vector generator correspond to the 16 bit word address that is in the vector generator program counter.  Games with the AVG custom have 13 bit addresses (so up to 8K words or 16K bytes), and others have 12 bit addresses (up to 4K words or 8K bytes).  
+NOTE: The addresses for the vector generator correspond to the 16 bit word address that is in the vector generator program counter.  Games with the AVG custom have 13 bit addresses (so up to 8K words or 16K bytes), and others have 12 bit addresses (up to 4K words or 8K bytes).
 
 So for example 0x1000 in Star Wars is really 0x2000 in the CPU's vector memory since the CPU addresses correspond to bytes.  There is also an offset in most games since the vector memory does not start at zero in the CPU address space but it always starts at zero in the vector generator memory space.
 [VG JMP only no draw]
-This creates instructions which just jump to the next address.  
-Specify the number of copies in the control.  
-You can use this to check that the program counters make it all the way to the end without doing any drawing.  
+This creates instructions which just jump to the next address.
+Specify the number of copies in the control.
+You can use this to check that the program counters make it all the way to the end without doing any drawing.
 It should take about 2.35us plus 1.984us per copy.
 [AVG Set Scale]
-Set the linear and binary scaling factor.  
+Set the linear and binary scaling factor.
 Be sure to set bin scale to 0 if you are seeing any timing issues since if it is not zero the timing numbers will not match.
 [JSR Test]
 AVG only at this point -DVG coming soon!
@@ -113,5 +114,5 @@ Takes 7us on Star Wars.
 This just strobes VGGO with whatever was already loaded in memory hopefully still being there.
 This is useful if you have loaded a memory image and don't want to keep loading it to show it over and over again.
 [Run from Trace Setup]
-This will run the "vector program" from the trace setup screen.  
+This will run the "vector program" from the trace setup screen.
 You can enter your own program, press "assemble" and then come back here to run it.
