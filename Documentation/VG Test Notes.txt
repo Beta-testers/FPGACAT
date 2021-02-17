@@ -31,7 +31,6 @@ Qa of fourth = 85us pos (M6-14)
 Qb of fourth = 85.1us pos (M6-13)
 Qc of fourth = 85.2us pos (M6-12)
 
-
 H5-6 = 21.15us neg
 L3-3 = 21.15us pos
 K4-12 = 2708us pos
