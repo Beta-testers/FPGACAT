@@ -1,0 +1,19 @@
+Game	Space Duel		
+Description	Address Decoder Test 2		
+Start	A15	NEG	
+Stop	A15	NEG	
+Clock	Phase2	NEG	
+Stop to Start	TRUE		
+Clock to Phase2	TRUE		
+Enable addr counter	TRUE		
+Force Write	TRUE		
+Start to A15	TRUE		
+Signal	Location	Pin	Signature
+-	M5	8	5AAC
+/OUTPUT	L4	1	C9FU
+/VGGO	L4	2	258A
+/WDCLR	L4	3	4C6C
+/VGRST	L4	4	7079
+/INTACK	L4	5	F425
+/EAROMCON	L4	6	6175
+/EAROMWR	L4	7	HAU2

@@ -1,0 +1,18 @@
+Description	Defender CMOS RAM test		
+Start		NEG	
+Stop		NEG	
+Clock		NEG	
+Start Address	0xC400		
+End Address	0xC4FF		
+Delay	0		
+Stop to Start	TRUE		
+Clock to Phase2	TRUE		
+Start to A15	TRUE		
+NOP Mode	FALSE		
+Force Write	FALSE		
+Enable Address Counter	TRUE		
+Enable Data Counter	FALSE		
+Notes	Make sure bank 0 is selected
+Notes	Write 0 to D000
+Notes	
+Signal	Location	Pin	Signature
