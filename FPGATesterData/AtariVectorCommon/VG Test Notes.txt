@@ -1,0 +1,79 @@
+[VG Reset]
+This test resets the vector generator hardware by writing to the reset address.
+
+This does not run any vector state machine commands (no VGGO) so you will not see any pulse width information since HALT does not pulse.
+[VG Center]
+For AVG onlyThis runs the CENTER command then halts.  
+This should reset the integrators and bring the beam to the center.  Some hardware (maybe all) resets the integrators when the state machine is idle so the beam will already be centered.
+Typical time is 89.6 us
+[VG Halt Test]
+This runs just a single HALT instruction - check that the VG halt lights after this is run
+The halt test should run for about 2.4us on the AVG
+This is normally the first test to run (or second after VG reset).  If this fails to run (the VG does not halt after running this) it is a good idea to find the problem before proceeding with other tests.
+[VG DrawShort from Ram]
+Draw some short vectors on the screen then halt
+Typically 178 microseconds  - be sure to set the scale to 0 on the AVG since the scaling will change the timing.
+[VG Draw from RAM]
+Draw some long vectors then halt.
+On the AVG this is a battlezone "gunsight" except for space duel which is a "star"
+Typically 1174 microseconds, 454 for space duel
+[VG Draw Single Short Vec frm Ram]
+This will draw a single short vector according to your inputs.
+For 15x15 vectors the time is 26.8us
+[VG DrawShort from Ram BIG]
+This is useful for testing the program counters.  
+It will create a certain number of copies of the drawshort commands which you can use to fill up the vector ram to check that the program counters are able to go all the way to the end.  You can start with a smaller number of copies and get bigger which will use more and more bits of the program counter. 
+For the AVG, there are 7 instructions in the drawshort BIG so there are 14 bytes in each instruction.  Battlezone has 4K vector memory so you can run 292 copies in drawshort BIG 
+For the DVG, 68 copies of the drawshort BIG is 2041 bytes, so it covers the whole RAM (68 is the max copies for asteroids, etc)
+[VG Draw Single Long Vec]
+Draw a single long vector according to your inputs.
+For the 15x15 default the time is 17.6us with a bin scaling of 0
+This will overdrive a monitor so don't run any of these tests with a monitor connected especially this one!
+Here are times for various vector lengths:
+x,y  Time (us)
+1,1     8.3
+2,2     9.7
+4,4     12.3
+8,8     17.6
+16,16  28.2
+32,32  49.3
+64,64  91.6
+128,128 176.3
+256,256  345.6
+512,512  684.5
+1024,1024 1361.3
+2048,2048  2715.5
+[VG JMP test RAM]
+This jumps around a few times to check the loading of the program counters.  
+Typical 359.5us
+[VG JSR to address]
+This will JSR to a certain address which you have to know beforehand (typically in ROM).
+0x862 is the copyright in Asteroids
+0x9F8 is the character set in Battlezone 
+
+NOTE: The addresses for the vector generator correspond to the 16 bit word addressthat is in the vector generator program counter.  Games with the AVG customhave 13 bit addresses (so up to 8K words or 16K bytes), and others have 12 bit addresses (up to 4K words or 8K bytes).  
+
+So for example 0x1000 in Star Wars is really 0x2000 in the CPU's vector memorysince the CPU addresses correspond to bytes.  There is also an offset in most games since the vector memory does not start at zero in the CPU address spacebut it always starts at zero in the vector generator memory space.
+[VG JMP only no draw]
+This creates instructions which just jump to the next address.  
+Specify the number of copies in the control.  
+You can use this to check that the program counters make it all the way to the end without doing any drawing.  
+It should take about 2us per copy.
+[AVG Set Scale]
+Set the linear and binary scaling factor.  
+Be sure to set bin scale to 0 if you are seeing any timing issues since if it is not zero the timing numbers will not match.
+[JSR Test]
+AVG only at this point -DVG coming soon!
+This will perform a series of JSR instructions that are nested to a certain level.  You should see numbers on the oscilloscope screen showing the jump level.  Games with the AVG custom chip can only go to 3 levels (some repros do 4), Games with discrete AVG circuits (Tempest) can do 4 levels of nesting.
+You can set the 1st JSR address to be further down in RAM since sometimes the upper-address-bits will be bad in the stack and the lower bits OK.  Just be sure you don't go past the end of RAM.
+The address here is in AVG memory space (0 is the beginning of the VG RAM)
+[Run from File]
+For this test you can load a dump of a vector memory file (in binary format) and then run it on your board.
+[Set color/intensity]
+Sets the color and intensity using the values you input.
+[VGGO only]
+This just strobes VGGO with whatever was already loaded in memory hopefully still being there.
+This is useful if you have loaded a memory image and don't want to keep loading it to show it over and over again.
+[Run from Trace Setup]
+This will run the "vector program" from the trace setup screen.  
+You can enter your own program, press "assemble" and then come back here to run it.
