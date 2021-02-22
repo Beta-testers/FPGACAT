@@ -1,0 +1,38 @@
+Description	Decoders Test and Multiplexers		
+Start	A15	NEG	
+Stop	A15	NEG	
+Clock	Phase2	NEG	
+Start Address	0x0000		
+End Address	0xFFFF		
+Delay	113		
+Stop to Start	TRUE		
+Clock to Phase2	TRUE		
+Start to A15	TRUE		
+NOP Mode	TRUE		
+Force Write	FALSE		
+Enable Address Counter	TRUE		
+Enable Data Counter	FALSE		
+Notes	Williams MPU
+
+Signal	Location	Pin	Signature
+I/O	4G	1	HA92
+	4G	4	7H78
+	4G	6	2F18
+	4G	7	82A9
+	4G	10	0PAU
+	4G	11	51H9
+	4G	12	C5F8
+!RACNT	4G	15	PACP
+Enable	6H	1	2F18
+	6H	4	024A
+	6H	5	U6P4
+	6H	6	34HC
+	6H	7	PF6P
+	5K	2	51HA
+	5K	10	C5FC
+	5K	12	0PAF
+?	6G	3	8A90
+!E1	6G	6	C5F8
+!E2	6G	8	51H9
+!E3	6G	11	0PAU
+3b E	6E	8	7072
