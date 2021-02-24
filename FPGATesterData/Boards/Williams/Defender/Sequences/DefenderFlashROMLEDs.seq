@@ -1,0 +1,22 @@
+
+[SEQUENCE]
+Write	D000	00	Set page to 0 to access PIA
+Write	CC01	00	Set CFG A to access DDRA
+Write	CC00	C0	A6 and A7 to outputs, all others inputs
+Write	CC01	04	Set CFG A to access the port
+Write	CC00	00	Write 0 to portA
+Write	CC03	00	Set CFG B to access DDRB
+Write	CC02	FF	Set DDRB to all outputs
+Write	CC03	04	Set CFG B to access the port
+Write	CC02	00	Write 0 to port B
+Write	CC02	40	Write PB6 to high
+Delay_ms	0100	00	wait 256 ms
+Write	CC02	80	Write PB7 to high, PB6 low
+Delay_ms	0100	00	wait 256 ms
+Write	CC02	00	PB6 and PB7 both low
+Write	CC00	40	PA6 high
+Delay_ms	0100	00	wait 256ms
+Write	CC00	80	PA7 high
+Delay_ms	0100	00	wait 256ms
+Write	CC00	00	port A all off
+

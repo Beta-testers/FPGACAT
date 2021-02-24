@@ -1,0 +1,22 @@
+Description	Dig Dug Sound PROM test		
+Start	Pin2	NEG	
+Stop	Stop	NEG	
+Clock	Pin 14	POS	
+Start Address	0x0000		
+End Address	0xFFFF		
+Delay	0		
+Stop to Start	TRUE		
+Clock to Phase2	FALSE		
+Start to A15	FALSE		
+NOP Mode	FALSE		
+Force Write	FALSE		
+Enable Address Counter	FALSE		
+Enable Data Counter	FALSE		
+Notes	136007-109.  Pin 1 not grounded
+Notes	Tester in main cpu socket or main CPU removed.
+
+Signal	Location	Pin	Signature
+D0	-109	12	79P9
+D1	-109	11	F87P
+D2	-109	10	7HC3
+D3	-109	9	CPH9
