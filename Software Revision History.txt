@@ -1,0 +1,95 @@
+Revision 1.0  - Initial Release 7/19/20
+Revision 1.01   Fixed a bug in the ROM test where it would not display the failing bits in the second bank on a banked ROM
+		Added a new signature analysis wizard with speech
+		Added the JSR vector generator test for the AVG (not implemented on the DVG yet)
+		Released 8/1/20
+
+Revision 1.02   Fixed a bug where if the ROM files were not there, it would still say OK for all of the ROM tests in "compare to file" mode
+		Added an error display off to the right (resize the window to see it) this will show the last 20 errors encountered by the software
+
+Revision 1.03	Changed the Loading and Saving of configuration files - now you just click load or save and it pops up a dialog box instead of the
+		two step process which was confusing in previous versions.
+		Added support for measuring the phase2 clock frequency for logic version 1.01 and higher.  The software will work fine with logic 1.0
+		but the indicator for the clock frequency will not show up.
+		Rearranged the controls on the setup screen to better match the order that you would do things
+
+Revision 1.04	8/11/2020
+		Fixed a bug where the "force write" setting would not actually get set when loading the signature file for the wizard
+		Added a "notes" section to the signature wizard and the associated files
+		Added a selection to pick the sound output device and a test button on the first setup screen
+
+Version 1.051 	 9/15/2020
+
+Rearranged the configuration screens into sections with a tab control so the configuration tab was not so "busy"
+
+Added a watchdog data field to the board configuration to prepare for future logic versions that will "idle" by resetting the watchdog
+
+Added a pre/post write option for memory tests for enabling the ROM and RAM on Williams boards - also can be used as a bank select
+
+Fixed a bug where there would be a timeout in the RAM test for large memories.
+
+The RAM sections now list the chip locations as a comma separated list which works for 1-bit, 2-bit, 4-bit, or 8-bit RAMs.  
+Now you just list the locations in a comma separated list, like "J3, K3, L3, ..." from high bit to low bit.  
+If RAMs are 4 bit wide you just specify the high nibble , low nibble locations.
+If 8 bit you just specify one location.  Then in the RAM test it figures things out based on how many entries there are.  Older configuration files are
+backward compatible to be loaded into the new version but new configuration files will not load chip locations into the older software.
+
+In the RAM test there are now lights to indicate success of each bit (removed the Low OK, High OK messages - now it tells you which bits are OK)
+
+Added a vector generator test to load a binary file into the vector memory and run it - this is intended to be used with MAME dumps but has not yet been tested.
+
+Added a vector generator test to just do "VGGO" assuming that the memory already contains the vector program.  
+This is useful for repeating tests without loading the memory each time.
+
+Added a "Loop" button on the vector generator screen to repeat the test over and over without having to push a button.
+
+
+Version 1.06	9/24/2020
+
+Added a "draw single long vector" test, and now you can set the length of the single short or long vector you want to draw (works for AVG only at this point)
+Added a way to set the color and intensity latch (not yet tested)
+
+
+Version 1.07  11/30/2020  **OBSOLETE do not use**
+
+Added support for the new logic (1.03) which has a "turbo mode" for much faster communication with the tester.
+Added the trace software which allows a "logic analyzer style" trace of the vector generator state machine and signature analyzer.
+The vector generator trace feature allows you to assemble a vector program and run it for a trace or from the normal VG test functions.
+In the new logic, the pulse widths are measured with a faster clock and have more resolution - V1.07 software supports this
+The new logic keeps track of the previous pulse widths for situations where you want the last two pulse widths (i.e. vector scaling and normalization)
+
+Version 1.08  12/16/2020
+
+Support for V1.04+ logic which has some changes to the trace (now 23 bit count).  
+Version 1.03 logic and 1.07 software were not released publically and are obsolete
+Added vector generator tests descriptions/notes and reorganized tests screen
+Added RAM test cycling to repeat the RAM test and track pass/fail rates and errors over time
+Vector generator tests now show a disassembly of the vector generator code that was run.
+
+Version 1.09 1/12/2021
+
+Support for V1.06+ logic which now has the ability to do signature analysis over a range of addresses and also can send a count out to the data lines in write mode
+Added a memory block read and write feature
+Fixed a bug where you would get an error if trying to save a configuration
+Several minor bug fixes and some cleanup
+
+Version 2.0  1/29/2021
+Z80 support added to several sections - Z80 clock now multiplies by 7 to give the proper value for the board clock
+Board notes section added to board config
+Fixed a bug where the trace would loop forever if the vector generator does not halt
+Auto-generated signatures added to the signature screen - the software will now automatically generate signatures for A0-A15 and show a match for these when you are probing them.
+The time trace now keeps track of the timestamp of the last record when the trace buffer fills, and the time trace will terminate at this value to reduce confusion when some traces have longer time domains than others.
+You can now click on the bit error light in the RAM test and it will tell you which chip goes with that bit
+Fixed a bug in the STAT instruction for vector assembly and disassembly - it is different for star wars so now the software adjusts according to the VG type
+
+Version 2.01  2/11/2021
+Added an Init Sequence function to the board configuration.  Now when you open communication you can do a sequence of writes, reads, or compares to a set of memory locations.
+You can now save signature settings and signatures through the save button on the signature wizard tab.
+
+Version 2.02 2/12/2021
+When loading a signature configuration file, the start and stop address would get reversed - this bug is fixed in this version.  (it's been there since the start and stop were added but old config files that did not have start and stop would not trigger the bug)
+
+Version 2.1  2/16/2021
+Added a number of bits field for RAMs so that 4-bit RAMs can pass the RAM test (i.e. Defender CMOS RAM)
+Added a ROM type and signatures to the ROM configs - signatures are now used by the auto-signature-wizard generator
+Added an init sequence to the signature wizard, board config (when you open the connection) and manual I/O screen
