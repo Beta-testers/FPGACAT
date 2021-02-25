@@ -1,0 +1,46 @@
+Description	Frogger tile RAM test		
+Start		NEG	
+Stop		NEG	
+Clock		NEG	
+Start Address	0xA800		
+End Address	0xABFF		
+Delay	0		
+Stop to Start	TRUE		
+Clock to Phase2	TRUE		
+Start to A15	TRUE		
+NOP Mode	FALSE		
+Force Write	TRUE		
+Enable Address Counter	TRUE		
+Enable Data Counter	TRUE		
+Notes	When prompted, turn off "Force R/W to LOW (write)" mode to test outputs.
+
+Signal	Location	Pin	Signature
+A7	IC85	1	F61C
+A6	IC85	2	0108
+A5	IC85	3	3A9A
+A4	IC85	4	H10F
+A3	IC85	5	HH53
+A2	IC85	6	0863
+A1	IC85	7	29PP
+A9	IC85	17	4596
+A8	IC85	16	2946
+A0	IC85	15	7A33
+A7	IC86	1	F61C
+A6	IC86	2	0108
+A5	IC86	3	3A9A
+A4	IC86	4	H10F
+A3	IC86	5	HH53
+A2	IC86	6	0863
+A1	IC86	7	29PP
+A9	IC86	17	4596
+A8	IC86	16	2946
+A0	IC86	15	7A33
+	R/W	LOW	XXXX
+A3	IC85	11	0863
+A2	IC85	12	29PP
+A1	IC85	13	7A33
+A0	IC85	14	HH53
+A7	IC86	11	3A9A
+A6	IC86	12	H10F
+A5	IC86	13	F61C
+A4	IC86	14	0108
