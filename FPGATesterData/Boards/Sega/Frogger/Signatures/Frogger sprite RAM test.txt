@@ -1,0 +1,42 @@
+Description	Frogger sprite RAM test		
+Start		NEG	
+Stop		NEG	
+Clock		NEG	
+Start Address	0xB300		
+End Address	0xB3FF		
+Delay	0		
+Stop to Start	TRUE		
+Clock to Phase2	TRUE		
+Start to A15	TRUE		
+NOP Mode	FALSE		
+Force Write	FALSE		
+Enable Address Counter	TRUE		
+Enable Data Counter	TRUE		
+Notes	When prompted, turn off "Force R/W to LOW (write)" mode to test outputs.
+
+Signal	Location	Pin	Signature
+A6	IC50	1	77F7
+A5	IC50	2	85PA
+A4	IC50	3	7P25
+A3	IC50	4	5CP0
+A0	IC50	5	96PF
+A1	IC50	6	725C
+A2	IC50	7	P5PH
+A7	IC50	17	6PCP
+A6	IC51	1	77F7
+A5	IC51	2	85PA
+A4	IC51	3	7P25
+A3	IC51	4	5CP0
+A0	IC51	5	96PF
+A1	IC51	6	725C
+A2	IC51	7	P5PH
+A7	IC51	17	6PCP
+	R/W	LOW	XXXX
+A3	IC50	11	5CP0
+A2	IC50	12	P5PH
+A1	IC50	13	725C
+A0	IC50	14	96PF
+A7	IC51	11	6PCP
+A6	IC51	12	77F7
+A5	IC51	13	85PA
+A4	IC51	14	7P25
