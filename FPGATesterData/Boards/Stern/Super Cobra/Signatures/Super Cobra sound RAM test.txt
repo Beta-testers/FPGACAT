@@ -1,0 +1,54 @@
+Description	Super Cobra sound RAM test		
+Start		NEG	
+Stop		NEG	
+Clock		NEG	
+Start Address	0x8800		
+End Address	0x8BFF		
+Delay	0		
+Stop to Start	TRUE		
+Clock to Phase2	TRUE		
+Start to A15	TRUE		
+NOP Mode	FALSE		
+Force Write	TRUE		
+Enable Address Counter	TRUE		
+Enable Data Counter	TRUE		
+Notes	For testing sound RAM at 6C/6D (sound board). When prompted, turn off "Force R/W to LOW (write)" mode to test outputs.
+
+Signal	Location	Pin	Signature
+A6	6C	1	0108
+A5	6C	2	3A9A
+A4	6C	3	H10F
+A3	6C	4	HH53
+A0	6C	5	7A33
+A1	6C	6	29PP
+A2	6C	7	0863
+A7	6C	17	F61C
+A8	6c	16	2946
+A9	6C	15	4596
+A0	6C	11	7A33
+A1	6C	12	29PP
+A2	6C	13	0863
+A3	6C	14	HH53
+A6	6D	1	0108
+A5	6D	2	3A9A
+A4	6D	3	H10F
+A3	6D	4	HH53
+A0	6D	5	7A33
+A1	6D	6	29PP
+A2	6D	7	0863
+A7	6D	17	F61C
+A8	6D	16	2946
+A9	6D	15	4596
+A7	6D	11	F61C
+A6	6D	12	0108
+A5	6D	13	3A9A
+A4	6D	14	H10F
+	R/W	LOW	XXXX
+A0	6C	11	7A33
+A1	6C	12	29PP
+A2	6C	13	0863
+A3	6C	14	HH53
+A7	6D	11	F61C
+A6	6D	12	0108
+A5	6D	13	3A9A
+A4	6D	14	H10F

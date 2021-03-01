@@ -1,0 +1,53 @@
+Description	Super Cobra RAM test		
+Start		NEG	
+Stop		NEG	
+Clock		NEG	
+Start Address	0x8000		
+End Address	0x87ff		
+Delay	0		
+Stop to Start	TRUE		
+Clock to Phase2	TRUE		
+Start to A15	TRUE		
+NOP Mode	FALSE		
+Force Write	TRUE		
+Enable Address Counter	TRUE		
+Enable Data Counter	TRUE		
+Notes	For testing RAM at 1G/1K, 1H/1L. Restart SA to test second pair. When prompted, turn off "Force R/W to LOW (write)" mode to test outputs.		
+Signal	Location	Pin	Signature
+A6	1G	1	4U2A
+A5	1G	2	4442
+A4	1G	3	P030
+A3	1G	4	H0AA
+A0	1G	5	H62U
+A1	1G	6	C21A
+A2	1G	7	HA07
+A7	1G	17	0772
+A8	1G	16	9635
+A9	1G	15	1734
+A7	1G	11	0772
+A6	1G	12	4U2A
+A5	1G	13	4442
+A4	1G	14	P030
+A6	1K	1	4U2A
+A5	1K	2	4442
+A4	1K	3	P030
+A3	1K	4	H0AA
+A0	1K	5	H62U
+A1	1K	6	C21A
+A2	1K	7	HA07
+A7	1K	17	0772
+A8	1K	16	9635
+A3	1K	15	1734
+A3	1K	11	H0AA
+A2	1K	12	HA07
+A1	1K	13	C21A
+A0	1K	14	H62U
+	R/W	LOW	XXXX
+A7	1G	11	0772
+A6	1G	12	4U2A
+A5	1G	13	4442
+A4	1G	14	P030
+A3	1K	11	H0AA
+A2	1K	12	HA07
+A1	1K	13	C21A
+A0	1K	14	H62U

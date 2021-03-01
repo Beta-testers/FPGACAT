@@ -1,0 +1,50 @@
+Description	Super Cobra object RAM test		
+Start		NEG	
+Stop		NEG	
+Clock		NEG	
+Start Address	0x9000		
+End Address	0x90FF		
+Delay	0		
+Stop to Start	TRUE		
+Clock to Phase2	TRUE		
+Start to A15	TRUE		
+NOP Mode	FALSE		
+Force Write	TRUE		
+Enable Address Counter	TRUE		
+Enable Data Counter	TRUE		
+Notes	For testing object RAM at 3L/3M. When prompted, turn off "Force R/W to LOW (write)" mode to test outputs.
+
+Signal	Location	Pin	Signature
+A6	3L	1	77F7
+A5	3L	2	85PA
+A4	3L	3	7P25
+A3	3L	4	5CP0
+A0	3L	5	96PF
+A1	3L	6	725C
+A2	3L	7	P5PH
+A7	3L	17	6PCP
+A3	3L	11	5CP0
+A2	3L	12	P5PH
+A1	3L	13	725C
+A0	3L	14	96PF
+A6	3M	1	77F7
+A5	3M	2	85PA
+A4	3M	3	7P25
+A3	3M	4	5CP0
+A0	3M	5	96PF
+A1	3M	6	725C
+A2	3M	7	P5PH
+A7	3M	17	6PCP
+A7	3M	11	6PCP
+A6	3M	12	77F7
+A5	3M	13	85PA
+A4	3M	14	7P25
+	R/W	LOW	XXXX
+A3	3L	11	5CP0
+A2	3L	12	P5PH
+A1	3L	13	725C
+A0	3L	14	96PF
+A7	3M	11	6PCP
+A6	3M	12	77F7
+A5	3M	13	85PA
+A4	3M	14	7P25
