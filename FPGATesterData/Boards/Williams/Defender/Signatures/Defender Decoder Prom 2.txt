@@ -1,0 +1,26 @@
+Description	Defender Decoder Prom 2		
+Start		NEG	
+Stop		NEG	
+Clock		NEG	
+Start Address	0x0000		
+End Address	0xFFFF		
+Delay	0		
+Stop to Start	TRUE		
+Clock to Phase2	TRUE		
+Start to A15	TRUE		
+NOP Mode	FALSE		
+Force Write	FALSE		
+Enable Address Counter	TRUE		
+Enable Data Counter	FALSE		
+Notes	
+
+Signal	Location	Pin	Signature
+PA8		9	F5C0
+PA9		10	H366
+PA10		11	A42A
+PA11		13	P5P8
+PA12		14	3133
+PA13		15	A678
+DD6		16	H275
+DD7		17	FC87
+screen		23	0000

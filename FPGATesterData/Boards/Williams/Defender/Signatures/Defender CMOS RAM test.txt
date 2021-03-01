@@ -15,4 +15,6 @@ Enable Data Counter	FALSE
 Notes	Make sure bank 0 is selected
 Notes	Write 0 to D000
 Notes	
+InitSeq	Write	0000	D000	Sel Bank0
+
 Signal	Location	Pin	Signature
