@@ -94,4 +94,8 @@ Added a number of bits field for RAMs so that 4-bit RAMs can pass the RAM test (
 Added a ROM type and signatures to the ROM configs - signatures are now used by the auto-signature-wizard generator
 Added an init sequence to the signature wizard, board config (when you open the connection) and manual I/O screen
 Added options to the RAM config so you can set up banks of memory that are split into a certain block size and spacing - The RAM test now writes and reads to the RAMs according to the config settings so that it will skip around in memory to stay within one bank.
-
+Added block clear to the sequences
+Turbo mode now persists when closing and opening the software, connection, etc so you don't have to keep pushing the button
+Added browse button on the ROM config tab to find the ROM file more easily
+Logic probe added to the manual I/O screen and the sequence will update it while running to probe "live"
+Added pulse width and frequency measurements on the manual I/O screen
