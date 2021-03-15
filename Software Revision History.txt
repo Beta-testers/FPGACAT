@@ -99,3 +99,4 @@ Turbo mode now persists when closing and opening the software, connection, etc s
 Added browse button on the ROM config tab to find the ROM file more easily
 Logic probe added to the manual I/O screen and the sequence will update it while running to probe "live"
 Added pulse width and frequency measurements on the manual I/O screen
+Fixed several bugs in the DVG tests and added in the missing tests like the JSR test
