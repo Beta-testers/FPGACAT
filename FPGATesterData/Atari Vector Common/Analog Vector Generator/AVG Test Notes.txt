@@ -63,6 +63,9 @@ It should take about 2us per copy.
 [AVG Set Scale]
 Set the linear and binary scaling factor.  
 Be sure to set bin scale to 0 if you are seeing any timing issues since if it is not zero the timing numbers will not match.
+[Set Scale]
+Set the linear and binary scaling factor.  
+Be sure to set bin scale to 0 if you are seeing any timing issues since if it is not zero the timing numbers will not match.
 [JSR Test]
 AVG only at this point -DVG coming soon!
 This will perform a series of JSR instructions that are nested to a certain level.  You should see numbers on the oscilloscope screen showing the jump level.  Games with the AVG custom chip can only go to 3 levels (some repros do 4), Games with discrete AVG circuits (Tempest) can do 4 levels of nesting.
