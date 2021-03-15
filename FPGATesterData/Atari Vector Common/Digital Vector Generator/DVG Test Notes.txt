@@ -2,52 +2,65 @@
 This test resets the vector generator hardware by writing to the reset address.
 
 This does not run any vector state machine commands (no VGGO) so you will not see any pulse width information since HALT does not pulse.
+
+Note there is no reset on asteroids - if it gets stuck you have to enable the watchdog then disable it so that it resets the VG
 [VG Center]
-This test is for AVG only since there is no center command on the DVG
+On the DVG this runs sets the X,Y output to the center of the screen (512,512).
+It also sets the global scale to 0
+
+Typical halt time is 6.85us
 [VG Halt Test]
 This runs just a single HALT instruction - check that the VG halt lights after this is run
-The halt test should run for about 2.4us on the AVG
+The halt test should run for about 3.55 us on the DVG
 This is normally the first test to run (or second after VG reset).  If this fails to run (the VG does not halt after running this) it is a good idea to find the problem before proceeding with other tests.
+
+On asteroids earlier boards (not -05 or -06) you should connect the SA START input to HALT at A9 pin 10 (this is a LS109 flip flop).  On -05 and -06 asteroids this is at location A10 
+
+Don't forget to disable the watchdog since it will reset the vector generator during the tests!
 [VG DrawShort from Ram]
-Draw some short vectors on the screen then halt
-Typically 178 microseconds  - be sure to set the scale to 0 on the AVG since the scaling will change the timing.
+Draw some short vectors (an asteroid) on the screen then halt
+Typically 637.5 microseconds with a global scale of 0
 [VG Draw from RAM]
-Draw some long vectors then halt.
-On the AVG this is a battlezone "gunsight" except for space duel which is a "star"
-Typically 1174 microseconds, 454 for space duel
+This draws the test grid and intensity bars from Asteroids.  Typical time is 9838us
 [VG Draw Single Short Vec frm Ram]
 This will draw a single short vector according to your inputs.
-For 15x15 vectors the time is 26.8us
+The vector length does not change the halt time.
+
+Note that the center and the draw commands except for the single vector draws set the scale to 0 when they are done.  
+Halt times for a global scale of 0:
+Scale  Halt Time
+0            11.5
+1            16.775
+2            27.375
+3            48.55
 [VG DrawShort from Ram BIG]
 This is useful for testing the program counters.  
 It will create a certain number of copies of the drawshort commands which you can use to fill up the vector ram to check that the program counters are able to go all the way to the end.  You can start with a smaller number of copies and get bigger which will use more and more bits of the program counter. 
-For the AVG, there are 7 instructions in the drawshort BIG so there are 14 bytes in each instruction.  Battlezone has 4K vector memory so you can run 292 copies in drawshort BIG 
 For the DVG, 68 copies of the drawshort BIG is 2041 bytes, so it covers the whole RAM (68 is the max copies for asteroids, etc)
+
+1 copy takes about 637.5us
 [VG Draw Single Long Vec]
 Draw a single long vector according to your inputs.
-For the 15x15 default the time is 17.6us with a bin scaling of 0
 This will overdrive a monitor so don't run any of these tests with a monitor connected especially this one!
-Here are times for various vector lengths:
-x,y  Time (us)
-1,1     8.3
-2,2     9.7
-4,4     12.3
-8,8     17.6
-16,16  28.2
-32,32  49.3
-64,64  91.6
-128,128 176.3
-256,256  345.6
-512,512  684.5
-1024,1024 1361.3
-2048,2048  2715.5
+Here are times for various scales with a global scale of 0
+Note that the center and the draw commands except for the single vector draws set the scale to 0 when they are done.  
+scale Time (us) (should be within about .2us of these numbers)
+0     8.85
+1     10.175
+2     12.8
+3     18.1
+4     28.7
+5     49.9
+6     92.2
+7    176.9
+8    346.35
+9    685.18
 [VG JMP test RAM]
 This jumps around a few times to check the loading of the program counters.  
-Typical 359.5us
+Typical 1893us
 [VG JSR to address]
 This will JSR to a certain address which you have to know beforehand (typically in ROM).
 0x862 is the copyright in Asteroids
-0x9F8 is the character set in Battlezone 
 
 NOTE: The addresses for the vector generator correspond to the 16 bit word addressthat is in the vector generator program counter.  Games with the AVG customhave 13 bit addresses (so up to 8K words or 16K bytes), and others have 12 bit addresses (up to 4K words or 8K bytes).  
 
@@ -57,12 +70,17 @@ This creates instructions which just jump to the next address.
 Specify the number of copies in the control.  
 You can use this to check that the program counters make it all the way to the end without doing any drawing.  
 It should take about 2us per copy.
-[AVG Set Scale]
-Set the linear and binary scaling factor.  
-Be sure to set bin scale to 0 if you are seeing any timing issues since if it is not zero the timing numbers will not match.
+[Set Scale]
+Use the BinScale control to set the global scale for the vector generator.
+
+Note that the center and the draw commands except for the single vector draws set the scale to 0 when they are done.  You can set the scale here and then go to either of the single vector commands to see that this scale will add to the scale you set for the vectors commands.
+
+Using a logic probe, you can read this scale on pins 15,2,10,7 (scale 0 - scale 3) on M7 on Asteroids or M6 on Asteroids Deluxe (LS175)
+
+Halt time 6.85us
 [JSR Test]
-AVG only at this point -DVG coming soon!
-This will perform a series of JSR instructions that are nested to a certain level.  You should see numbers on the oscilloscope screen showing the jump level.  Games with the AVG custom chip can only go to 3 levels (some repros do 4), Games with discrete AVG circuits (Tempest) can do 4 levels of nesting.
+This will perform a series of JSR instructions that are nested to a certain level.  You should see numbers on the oscilloscope screen showing the jump level.  DVG games can do 4 levels of nesting.  I've seen one asteroids run OK but fail above 2 levels so the game might not use all 4 levels of stack!
+
 You can set the 1st JSR address to be further down in RAM since sometimes the upper-address-bits will be bad in the stack and the lower bits OK.  Just be sure you don't go past the end of RAM.
 The address here is in AVG memory space (0 is the beginning of the VG RAM)
 [Run from File]
