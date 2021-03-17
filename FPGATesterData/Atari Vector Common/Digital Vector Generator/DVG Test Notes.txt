@@ -3,7 +3,8 @@ This test resets the vector generator hardware by writing to the reset address.
 
 This does not run any vector state machine commands (no VGGO) so you will not see any pulse width information since HALT does not pulse.
 
-Note there is no reset on asteroids - if it gets stuck you have to enable the watchdog then disable it so that it resets the VG
+Note there is no reset on asteroids and lunar lander - if it gets stuck you have to enable the watchdog then disable it or push the button so that it resets the VG.
+Or for Asteroids or Lunar Lander it might be possible to jumper L6 pin 5 to  reset (D4 pin 8)
 [VG Center]
 On the DVG this runs sets the X,Y output to the center of the screen (512,512).
 It also sets the global scale to 0
