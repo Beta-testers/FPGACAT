@@ -86,7 +86,7 @@ The address here is in AVG memory space (0 is the beginning of the VG RAM)
 [Run from File]
 For this test you can load a dump of a vector memory file (in binary format) and then run it on your board.
 [Set color/intensity]
-Sets the color and intensity using the values you input.
+Not used on DVG
 [VGGO only]
 This just strobes VGGO with whatever was already loaded in memory hopefully still being there.
 This is useful if you have loaded a memory image and don't want to keep loading it to show it over and over again.
