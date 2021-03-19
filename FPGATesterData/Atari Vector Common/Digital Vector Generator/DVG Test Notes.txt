@@ -1,10 +1,8 @@
 [VG Reset]
 This test resets the vector generator hardware by writing to the reset address.
-
 This does not run any vector state machine commands (no VGGO) so you will not see any pulse width information since HALT does not pulse.
-
-Note there is no reset on asteroids and lunar lander - if it gets stuck you have to enable the watchdog then disable it or push the button so that it resets the VG.
-Or for Asteroids or Lunar Lander it might be possible to jumper L6 pin 5 to  reset (D4 pin 8)
+Note there is no VG reset on asteroids and lunar lander - you can do the modification below for these boards.
+For a temporary reset mod: Lift the negative side of C25 and jumper L6 pin 5 to the positive side to allow the tester to reset the DVG.
 [VG Center]
 On the DVG this runs sets the X,Y output to the center of the screen (512,512).
 It also sets the global scale to 0
@@ -14,7 +12,7 @@ Typical halt time is 6.85us
 This runs just a single HALT instruction - check that the VG halt lights after this is run
 The halt test should run for about 3.55 us on the DVG
 This is normally the first test to run (or second after VG reset).  If this fails to run (the VG does not halt after running this) it is a good idea to find the problem before proceeding with other tests.
-
+If halt fails you should do the DVG reset troubleshooting mod in the VG reset section to make troubleshooting easier.
 On asteroids earlier boards (not -05 or -06) you should connect the SA START input to HALT at A9 pin 10 (this is a LS109 flip flop).  On -05 and -06 asteroids this is at location A10 
 
 Don't forget to disable the watchdog since it will reset the vector generator during the tests!
