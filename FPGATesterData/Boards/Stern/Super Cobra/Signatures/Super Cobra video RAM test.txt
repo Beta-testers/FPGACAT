@@ -1,0 +1,54 @@
+Description	Super Cobra video RAM test		
+Start		NEG	
+Stop		NEG	
+Clock		NEG	
+Start Address	0x8800		
+End Address	0x8BFF		
+Delay	0		
+Stop to Start	TRUE		
+Clock to Phase2	TRUE		
+Start to A15	TRUE		
+NOP Mode	FALSE		
+Force Write	TRUE		
+Enable Address Counter	TRUE		
+Enable Data Counter	TRUE		
+Notes	For testing RAM at 3J/3K. When prompted, turn off "Force R/W to LOW (write)" mode to test outputs.
+
+Signal	Location	Pin	Signature
+A6	3J	1	F61C
+A5	3J	2	0108
+A4	3J	3	3A9A
+A3	3J	4	H10F
+A0	3J	5	HH53
+A1	3J	6	0863
+A2	3J	7	29PP
+A7	3J	17	4596
+A8	3J	16	2946
+A9	3J	15	7A33
+A4	3J	11	3A9A
+A3	3J	12	H10F
+A6	3J	13	F61C
+A5	3J	14	0108
+A6	3K	1	F61C
+A5	3K	2	0108
+A4	3K	3	3A9A
+A3	3K	4	H10F
+A0	3K	5	HH53
+A1	3K	6	0863
+A2	3K	7	29PP
+A7	3K	17	4596
+A8	3K	16	2946
+A9	3K	15	7A33
+A1	3K	11	0863
+A2	3K	12	29PP
+A9	3K	13	7A33
+A0	3K	14	HH53
+	R/W	LOW	XXXX
+A3	3J	11	3A9A
+A2	3J	12	H10F
+A1	3J	13	F61C
+A0	3J	14	0108
+A7	3K	11	0863
+A6	3K	12	29PP
+A5	3K	13	7A33
+A4	3K	14	HH53
