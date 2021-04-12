@@ -1,0 +1,18 @@
+Game	Asteroids		
+Description	Vector Generator RAM Test		
+Notes	Tie K3-1 to ground		
+Start	A15	NEG	
+Stop	A15	NEG	
+Clock	Phase2	NEG	
+Stop to Start	TRUE		
+Clock to Phase2	TRUE		
+Enable addr counter	TRUE		
+NOP Mode	TRUE		
+Force Write	FALSE		
+Start to A15	TRUE		
+Signal	Location	Pin	Signature
+	M5	3	98H1
+	M5	6	32U8
+	L5	4	37C6
+
+

@@ -1,0 +1,28 @@
+Game	Asteroids		
+Description	Vector Generator Address Selector		
+Notes	Tie K3-1 to ground		
+Start	A15	NEG	
+Stop	A15	NEG	
+Clock	Phase2	NEG	
+Stop to Start	TRUE		
+Clock to Phase2	TRUE		
+Enable addr counter	TRUE		
+NOP Mode	TRUE		
+Force Write	FALSE		
+Start to A15	TRUE		
+Signal	Location	Pin	Signature
+AM11	K3	4	6U28
+AM12	K3	12	4FCA
+VROM2	L3	10	F501
+VRAM	L3	12	AA2A
+AM0	F3	9	UUUU
+AM1	F3	7	FFFF
+AM2	F3	4	8484
+AM3	F3	12	P763
+AM4	H3	12	1U5P
+AM5	H3	4	0356
+AM6	H3	7	U759
+AM7	H3	9	6F9A
+AM8	J3	9	7791
+AM9	J3	12	6321
+AM10	J3	4	37C5

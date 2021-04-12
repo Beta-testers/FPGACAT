@@ -1,0 +1,23 @@
+GGame	Asteroids		
+Description	Address Decoder Test 2		
+Notes	Connect CLOCK to 6MHZ test point. 		
+Start	A15	NEG	
+Stop	A15	NEG	
+Clock		NEG	
+Stop to Start	TRUE		
+Clock to Phase2	FALSE		
+Enable addr counter	TRUE		
+NOP Mode	TRUE		
+Force Write	TRUE		
+Start to A15	TRUE		
+Signal	Location	Pin	Signature
+	D6	4	666
+	E5	8	7U7C
+DMAGO	L6	1	383U
+OUT	L6	2	P759
+WDCLR	L6	3	90P8
+EXPLODE	L6	4	UA0P
+DMANCNT	L6	5	A43F
+THUMP	L6	6	U5FA
+AUDIO	L6	7	81F6
+NOISERESET	L6	9	1A35

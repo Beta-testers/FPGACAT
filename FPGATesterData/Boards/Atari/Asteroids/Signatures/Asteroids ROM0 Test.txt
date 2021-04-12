@@ -1,0 +1,23 @@
+Game	Asteroids		
+Description	ROM0 Test		
+Notes	START/STOP to L3-5.		
+Start		NEG	
+Stop		POS	
+Clock	Phase2	NEG	
+Stop to Start	TRUE		
+Clock to Phase2	TRUE		
+Enable addr counter	TRUE		
+NOP Mode	TRUE		
+Force Write	FALSE		
+Start to A15	FALSE		
+Signal	Location	Pin	Signature
+DB0	F1	9	U83H
+DB1	F1	10	C79H
+DB2	F1	11	24U8
+DB3	F1	13	6H6H
+DB4	F1	14	41PA
+DB5	F1	15	PP5A
+DB7	F1	16	5857
+DB7	F1	17	U454
+
+
