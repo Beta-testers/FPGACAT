@@ -1,0 +1,44 @@
+Description	Gravitar address decoder		
+Start		NEG	
+Stop		NEG	
+Clock		NEG	
+Start Address	0x0000		
+End Address	0xFFFF		
+Delay	99		
+Stop to Start	TRUE		
+Clock to Phase2	TRUE		
+Start to A15	FALSE		
+NOP Mode	FALSE		
+Force Write	FALSE		
+Enable Address Counter	TRUE		
+Enable Data Counter	FALSE		
+Notes	START/STOP to R2 pin 14		
+Signal	Location	Pin	Signature
+A15	R2	14	755U
+A14	R2	13	3827
+A13	R2	12	3C96
+AB12	R2	11	HAP7
+AB11	R2	10	1293
+/RAM	R2	1	3APF
+/I-O0	R2	2	85H4
+/I-O1	R2	3	131H
+/I-OS	R2	4	96F9
+/EAROMRD	R2	5	F042
+/SINP1	R2	6	942F
+/SINP2	R2	7	3PCF
+/IO	R2	9	84AF
+A15	R1	14	755U
+A14	R1	13	3827
+A13	R1	12	3C96
+AB12	R1	11	HAP7
+AB11	R1	10	1293
+/VMEM	R1	1	U9U3
+ROM	R1	2	FU4U
+/ROM0	R1	3	H759
+/ROM1	R1	4	A3UH
+/ROM2	R1	5	AA6A
+/ROM3	R1	6	A711
+/ROM4	R1	7	54F5
+/ROM5	R1	9	P255
+
+
