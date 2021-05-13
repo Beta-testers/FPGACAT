@@ -1,0 +1,28 @@
+Game	Asteroids		
+Description	Address Bus Test		
+Start	A15	NEG	
+Stop	A15	NEG	
+Clock	Phase2	NEG	
+Stop to Start	TRUE		
+Clock to Phase2	TRUE		
+Enable addr counter	TRUE		
+NOP Mode	TRUE		
+Force Write	FALSE		
+Start to A15	TRUE		
+Signal	Location	Pin	Signature
+AB0	C2	7	UUUU
+AB1	C2	12	FFFF
+AB2	C2	9	8484
+AB3	C2	14	P763
+AB4	C2	5	1U5P
+AB5	C2	16	0356
+AB6	C2	18	U759
+AB7	C2	3	6F9A
+AB8	B2	14	7791
+AB9	B2	16	6321
+AB10	B2	12	37C5
+AB11	B2	7	6U28
+AB12	B2	9	4FCA
+A13	C3	23	4868
+A14	C3	24	9UP1
+A15	C3	25	0001

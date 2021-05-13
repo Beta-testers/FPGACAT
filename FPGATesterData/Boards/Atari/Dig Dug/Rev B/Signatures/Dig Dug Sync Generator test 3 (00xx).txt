@@ -1,0 +1,27 @@
+Description	Dig Dug 00xx custom IC test 1		
+Start		POS	
+Stop		NEG	
+Clock		NEG	
+Start Address	0x0000		
+End Address	0xFFFF		
+Delay	99		
+Stop to Start	TRUE		
+Clock to Phase2	TRUE		
+Start to A15	TRUE		
+NOP Mode	FALSE		
+Force Write	FALSE		
+Enable Address Counter	TRUE		
+Enable Data Counter	TRUE		
+Notes	For testing 00xx custom at 4D. To first verify sync inputs use 07xx/00xx test 1 (for pins 1-7) and test 2 (for pins 9-13).		
+Signal	Location	Pin	Signature
+AB10	4D	16	HH86
+AB9	4D	17	577A
+AB8	4D	18	7707
+AB7	4D	19	A3C1
+AB6	4D	20	7211
+AB5	4D	21	AA08
+AB4	4D	22	C4C3
+AB3	4D	23	0772
+AB2	4D	24	7050
+AB1	4D	25	C113
+AB0	4D	26	H335

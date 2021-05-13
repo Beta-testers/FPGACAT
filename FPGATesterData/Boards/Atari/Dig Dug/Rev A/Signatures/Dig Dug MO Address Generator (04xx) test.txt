@@ -1,0 +1,37 @@
+Description	Dig Dug Motion Object Address Generator & Decoder Test		
+Start		POS	
+Stop		NEG	
+Clock		NEG	
+Start Address	0x0000		
+End Address	0xFFFF		
+Delay	99		
+Stop to Start	TRUE		
+Clock to Phase2	TRUE		
+Start to A15	TRUE		
+NOP Mode	FALSE		
+Force Write	TRUE		
+Enable Address Counter	TRUE		
+Enable Data Counter	TRUE		
+Notes	For testing Motion Object Generator & Decoder, including 04xx at 9K.		
+Signal	Location	Pin	Signature
+AB7	10J/K	8	A3C1
+AB8	10J/K	6	7707
+AB9	10J/K	4	577A
+AB6	9K	21	7211
+AB5	9K	20	AA08
+AB4	9K	19	C4C3
+AB3	9K	18	0772
+AB2	9K	17	7050
+AB1	9K	16	C113
+AB0	9K	15	H335
+MORA7	10J/K	12	A3C1
+MORA8	10J/K	14	7707
+MORA9	10J/K	16	577A
+MORA6	9K	7	7211
+MORA5	9K	8	AA08
+MORA4	9K	9	C4C3
+MORA3	9K	10	0772
+MORA2	9K	11	7050
+MORA1	9K	12	C113
+MORA0	9K	13	H335
+

@@ -1,0 +1,25 @@
+Game	Asteroids		
+Description	Address Decoder Test 1		
+Notes			
+Start	A15	NEG	
+Stop	A15	NEG	
+Clock	Phase2	NEG	
+Stop to Start	TRUE		
+Clock to Phase2	TRUE		
+Enable addr counter	TRUE		
+NOP Mode	TRUE		
+Force Write	FALSE		
+Start to A15	TRUE		
+Signal	Location	Pin	Signature
+SINP0	E4	4	AF76
+SINP1	E4	5	6913
+OPTS	E4	6	13HP
+PMEM	E4	9	3282
+VMEM	E4	10	AH63
+	E4	11	7APA
+ZPAGE	E4	12	P508
+	D6	10	3H01
+	C6	8	3H02
+PROM0	L3	5	UH4P
+PROM1	L3	6	A04H
+PROM2	L3	7	86C1
