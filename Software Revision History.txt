@@ -105,3 +105,4 @@ Fixed font size for known sigs
 Known signatures are now calculated correctly if SA is in NOP mode
 Enlarged the VG notes area
 Added looping feature to ROM test
+Set the VG type in the VG trace setup when loading or changing the VG type in the board config - otherwise when you go to assemble or disassemble it will be set to the wrong type for digital boards unless you also set in the VG trace setup or load a trace setup
