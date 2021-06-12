@@ -89,7 +89,11 @@ You can now save signature settings and signatures through the save button on th
 Version 2.02 2/12/2021
 When loading a signature configuration file, the start and stop address would get reversed - this bug is fixed in this version.  (it's been there since the start and stop were added but old config files that did not have start and stop would not trigger the bug)
 
-Version 2.1  3/14/2021
+<<<<<<< HEAD
+Version 2.10  3/14/2021
+=======
+Version 2.1  5/18/2021 (several alpha releases)
+>>>>>>> 67d2ccf1eaca039e7d07710b5d2c1424035601f0
 New folder structure that is more organized and has all board-related information in single folders.
 Added a number of bits field for RAMs so that 4-bit RAMs can pass the RAM test (i.e. Defender CMOS RAM)
 Added a ROM type and signatures to the ROM configs - signatures are now used by the auto-signature-wizard generator
@@ -104,3 +108,8 @@ Fixed several bugs in the DVG tests and added in the missing tests like the JSR 
 Fixed font size for known sigs
 Known signatures are now calculated correctly if SA is in NOP mode
 Enlarged the VG notes area
+<<<<<<< HEAD
+Set the VG type in the VG trace setup when loading or changing the VG type in the board config - otherwise when you go to assemble or disassemble it will be set to the wrong type for digital boards unless you also set in the VG trace setup or load a trace setup
+=======
+Added looping feature to ROM test
+>>>>>>> 67d2ccf1eaca039e7d07710b5d2c1424035601f0
