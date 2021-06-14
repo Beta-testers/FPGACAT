@@ -89,7 +89,7 @@ You can now save signature settings and signatures through the save button on th
 Version 2.02 2/12/2021
 When loading a signature configuration file, the start and stop address would get reversed - this bug is fixed in this version.  (it's been there since the start and stop were added but old config files that did not have start and stop would not trigger the bug)
 
-Version 2.1  5/18/2021 (several alpha releases)
+Version 2.10  5/18/2021 (several alpha releases)
 New folder structure that is more organized and has all board-related information in single folders.
 Added a number of bits field for RAMs so that 4-bit RAMs can pass the RAM test (i.e. Defender CMOS RAM)
 Added a ROM type and signatures to the ROM configs - signatures are now used by the auto-signature-wizard generator
@@ -106,3 +106,5 @@ Known signatures are now calculated correctly if SA is in NOP mode
 Enlarged the VG notes area
 Added looping feature to ROM test
 Set the VG type in the VG trace setup when loading or changing the VG type in the board config - otherwise when you go to assemble or disassemble it will be set to the wrong type for digital boards unless you also set in the VG trace setup or load a trace setup
+Added the "nonblock" option to read/write memory blocks for the RAM test as one big block instead of lots of smaller transactions to speed things up for small block sizes.  For writes the "gaps" are filled in with whatever was written by the tester after the board was opened, and reads are processed to check only the relevant parts of the data.
+Example RAM block options for centipede: blocksize=0x10,blockspacing=0x40,nonblock=true
