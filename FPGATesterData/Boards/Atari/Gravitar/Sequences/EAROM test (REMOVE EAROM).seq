@@ -1,0 +1,27 @@
+
+[SEQUENCE]
+Write	8900	00	EAROMCON to 0 - PULL EAROM before this test!
+Write	8900	01	EAROMCON to 1 (Check K2 outputs with data probe)
+Write	8900	02	EAROMCON to 2 (pulse a 1 through the 4 bits)
+Write	8900	04	EAROMCON to 4  Repeat this test for easier testing
+Write	8900	08	EAROMCON to 8 (final bit)
+Write	8900	04	This should enable the data outputs of J2 for below
+Write	8940	00	Write 0 to address and data
+Read	7000	00	Expect 0 Data should be read back through LS244
+Write	8941	01	Write 1 to address and data
+Read	7000	00	Expect 1 Data should be read back through LS244
+Write	8942	02	Write 2 to address and data
+Read	7000	00	Expect 2
+Write	8944	04	Write 4 to address and data
+Read	7000	00	Expect 4
+Write	8948	08	Write 8 to address and data
+Read	7000	00	Expect 8
+Write	8950	10	Write 0x10 to address and data
+Read	7000	00	Expect 0x10
+Write	8960	20	Write 0x20 to address and data
+Read	7000	00	Expect 0x20
+Write	8960	40	Write 0x40 to address 0x20
+Read	7000	00	Expect 0x40
+Write	8960	80	Write 0x80 to address 0x20
+Read	7000	00	Expect 0x80
+
