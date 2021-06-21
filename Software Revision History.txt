@@ -108,3 +108,7 @@ Added looping feature to ROM test
 Set the VG type in the VG trace setup when loading or changing the VG type in the board config - otherwise when you go to assemble or disassemble it will be set to the wrong type for digital boards unless you also set in the VG trace setup or load a trace setup
 Added the "nonblock" option to read/write memory blocks for the RAM test as one big block instead of lots of smaller transactions to speed things up for small block sizes.  For writes the "gaps" are filled in with whatever was written by the tester after the board was opened, and reads are processed to check only the relevant parts of the data.
 Example RAM block options for centipede: blocksize=0x10,blockspacing=0x40,nonblock=true
+
+Version 2.11
+Added logic indicator for the data probe to the vector generator screen
+Added and "expect" for reads of a memory sequence (put "expect 0x01" to expect the read to be a 1)  See Gravitar EAROM test example
