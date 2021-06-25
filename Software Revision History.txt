@@ -112,3 +112,6 @@ Example RAM block options for centipede: blocksize=0x10,blockspacing=0x40,nonblo
 Version 2.11
 Added logic indicator for the data probe to the vector generator screen
 Added and "expect" for reads of a memory sequence (put "expect 0x01" to expect the read to be a 1)  See Gravitar EAROM test example
+
+Version 2.12
+Changed the auto load signal names to work better for the digital vector generator
