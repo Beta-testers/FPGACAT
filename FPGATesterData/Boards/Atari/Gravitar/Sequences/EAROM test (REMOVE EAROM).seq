@@ -1,6 +1,6 @@
 
 [SEQUENCE]
-Write	8900	00	EAROMCON to 0 - PULL EAROM before this test!
+Write	8900	00	Disable Watchdog and remove EAROM before this test!
 Write	8900	01	EAROMCON to 1 (Check K2 outputs with data probe)
 Write	8900	02	EAROMCON to 2 (pulse a 1 through the 4 bits)
 Write	8900	04	EAROMCON to 4  Repeat this test for easier testing
