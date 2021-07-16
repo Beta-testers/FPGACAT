@@ -115,3 +115,8 @@ Added and "expect" for reads of a memory sequence (put "expect 0x01" to expect t
 
 Version 2.12
 Changed the auto load signal names to work better for the digital vector generator
+
+Version 2.13
+Added CRC32 to the memory sequence operations - you can now read a section of memory (address and size) and it will calculate the CRC32
+The blocks in the memory test has an option (BlockWR) to write and read each block instead of writing all the blocks and then reading them - Possible improvement on Williams memory tests
+ 
