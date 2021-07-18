@@ -119,4 +119,5 @@ Changed the auto load signal names to work better for the digital vector generat
 Version 2.13
 Added CRC32 to the memory sequence operations - you can now read a section of memory (address and size) and it will calculate the CRC32
 The blocks in the memory test has an option (BlockWR) to write and read each block instead of writing all the blocks and then reading them - Possible improvement on Williams memory tests
- 
+You can now build a list of signals in the signature wizard without signatures and click a button to copy the current signature to the one that is active
+Known signatures now show up even if the address counter is not enabled (all high, all low, or from the signature list) 
