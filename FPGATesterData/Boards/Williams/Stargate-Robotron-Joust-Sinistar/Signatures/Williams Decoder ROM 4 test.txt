@@ -1,0 +1,26 @@
+Description	Decoder ROM 4 test		
+Start	A15	NEG	
+Stop	START	NEG	
+Clock	PHASE2	NEG	
+Start Address	0x0000		
+End Address	0xBFFF		
+Delay	25		
+Stop to Start	TRUE		
+Clock to Phase2	TRUE		
+Start to A15	TRUE		
+NOP Mode	FALSE		
+Force Write	FALSE		
+Enable Address Counter	TRUE		
+Enable Data Counter	TRUE		
+Notes	
+InitSeq	Write	C900	00	
+
+Signal	Location	Pin	Signature
+PA8	3G	9	F7A3
+PA9	3G	10	129H
+PA10	3G	11	P13P
+PA11	3G	13	894P
+PA12	3G	14	FCC4
+PA13	3G	15	H49H
+PROMD6	3G	16	UP4C
+PROMD7	3G	17	08A4

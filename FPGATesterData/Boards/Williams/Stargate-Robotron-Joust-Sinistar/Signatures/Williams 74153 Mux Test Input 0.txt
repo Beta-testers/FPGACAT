@@ -1,0 +1,25 @@
+Description	Williams 74153 Mux Test for Input 0		
+Start	A15	NEG	
+Stop	START	NEG	
+Clock	PHASE2	NEG	
+Start Address	0x0000		
+End Address	0xBFFF		
+Delay	0		
+Stop to Start	TRUE		
+Clock to Phase2	TRUE		
+Start to A15	TRUE		
+NOP Mode	FALSE		
+Force Write	FALSE		
+Enable Address Counter	TRUE		
+Enable Data Counter	FALSE		
+Notes	
+InitSeq	Write	C900	00	
+
+Signal	Location	Pin	Signature
+MA0	4E	7	F7A3
+MA1	4E	9	129H
+MA2	3D	7	P13P
+MA3	3D	9	894P
+MA4	3E	7	FCC4
+MA5	3E	9	H49H
+MA6	4F	7	3457

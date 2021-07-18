@@ -1,0 +1,25 @@
+Description	Williams 74153 Mux Test for Input 1		
+Start	A15	NEG	
+Stop	START	NEG	
+Clock	PHASE2	NEG	
+Start Address	0x0000		
+End Address	0xBFFF		
+Delay	150		
+Stop to Start	TRUE		
+Clock to Phase2	TRUE		
+Start to A15	TRUE		
+NOP Mode	FALSE		
+Force Write	FALSE		
+Enable Address Counter	TRUE		
+Enable Data Counter	FALSE		
+Notes	Here we use the data delay to catch the second part of the mux sequence which selects the address bus instead of the pseudo address bus.
+InitSeq	Write	C900	00	
+
+Signal	Location	Pin	Signature
+MA0	4E	7	13FH
+MA1	4E	9	50F3
+MA2	3D	7	411H
+MA3	3D	9	7233
+MA4	3E	7	P37H
+MA5	3E	9	9FFA
+MA6	4F	7	14P7
