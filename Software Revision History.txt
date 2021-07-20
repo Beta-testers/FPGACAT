@@ -122,3 +122,6 @@ The blocks in the memory test has an option (BlockWR) to write and read each blo
 You can now build a list of signals in the signature wizard without signatures and click a button to copy the current signature to the one that is active
 Known signatures now show up even if the address counter is not enabled (all high, all low, or from the signature list) 
 You can now right click in the list of signatures and there is a menu option to go to that signature
+
+Version 2.20
+Added EAROM testing and a configuration file section for EAROM settings

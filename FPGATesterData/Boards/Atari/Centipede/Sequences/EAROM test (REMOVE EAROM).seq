@@ -1,0 +1,27 @@
+
+[SEQUENCE]
+Write	1680	00	Disable Watchdog and remove EAROM before this test!
+Write	1680	01	EAROMCON to 1 (Check E4 outputs with data probe)
+Write	1680	02	EAROMCON to 2 (pulse a 1 through the 4 bits)
+Write	1680	04	EAROMCON to 4  Repeat this test for easier testing
+Write	1680	08	EAROMCON to 8 (final bit)
+Write	1680	02	This should enable the data outputs of H4 for below
+Write	1600	00	Write 0 to address and data
+Read	1700	00	Expect 0 Data should be read back through LS244
+Write	1601	01	Write 1 to address and data
+Read	1700	00	Expect 1 Data should be read back through LS244
+Write	1602	02	Write 2 to address and data
+Read	1700	00	Expect 2
+Write	1604	04	Write 4 to address and data
+Read	1700	00	Expect 4
+Write	1608	08	Write 8 to address and data
+Read	1700	00	Expect 8
+Write	1610	10	Write 0x10 to address and data
+Read	1700	00	Expect 0x10
+Write	1620	20	Write 0x20 to address and data
+Read	1700	00	Expect 0x20
+Write	1620	40	Write 0x40 to address 0x20
+Read	1700	00	Expect 0x40
+Write	1620	80	Write 0x80 to address 0x20
+Read	1700	00	Expect 0x80
+
