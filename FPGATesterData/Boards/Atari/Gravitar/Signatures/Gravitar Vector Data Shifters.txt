@@ -1,0 +1,73 @@
+Description	Gravitar Vector Data Shifters
+Stop		POS	
+Clock		NEG	
+Start Address	0x0000		
+End Address	0xFFFF		
+Delay	99		
+Stop to Start	TRUE		
+Clock to Phase2	FALSE		
+Start to A15	FALSE		
+NOP Mode	FALSE		
+Force Write	FALSE		
+Enable Address Counter	FALSE		
+Enable Data Counter	FALSE		
+Notes	TO Enable SA: 
+Notes	PUT Gravitar in Test mode
+Notes	START/STOP ON SAEN
+Notes	CLK ON SACLK
+Notes	DIPP10  2,3,4 OFF
+Notes	WDDIS TO GND
+Notes	PRESS R127 AND AUX COIN TOGETHER
+Notes	(screen turns off)
+Notes	GND SA TEST POINT (SA starts)
+	
+
+Signal	Location	Pin	Signature
+~ENORM	E7	1	8P54
+NA	E7	3	0660
+~LATCH1	F7	1	C794
+~LATCH3	F7	9	1C91
+~LATCH2	F7	11	79P4
+NA	F7	12	0660
+~LATCH0	F7	13	8834
+DVG7	J8	3	3CC1
+DVG6	J8	4	144P
+DVG5	J8	5	2406
+DVG4	J8	6	A88A
+DVY4	J8 	12	1H6F
+DVY5	J8	13	0H0H
+DVY6	J8	14	A262
+DVY7	J8	15	6608
+DVY8	H8	12	F580
+DVY9	H8	13	PA7F
+DVY10	H8	14	H2P1
+DVY11	H8	15	389H
+DVX3	A8	15	2A56
+DVX4	C8	12	95F0
+DVX5	C8	13	95F0
+DVX6	C8	14	2A56
+DVX7	C8	15	CU96
+~LATCH1	B8	1	C794
+12MHZ	B8	11	0000
+DVX8	B8	12	08U7
+DVX9	B8	13	FH3H
+DVX10	B8	14	F5FA
+DVX11	B8	15	0FAH
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

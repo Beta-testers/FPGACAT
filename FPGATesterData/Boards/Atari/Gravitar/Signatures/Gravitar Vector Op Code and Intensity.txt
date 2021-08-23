@@ -1,0 +1,59 @@
+Description	Gravitar Vector Op Code and Intensity
+Stop		POS	
+Clock		NEG	
+Start Address	0x0000		
+End Address	0xFFFF		
+Delay	99		
+Stop to Start	TRUE		
+Clock to Phase2	FALSE		
+Start to A15	FALSE		
+NOP Mode	FALSE		
+Force Write	FALSE		
+Enable Address Counter	FALSE		
+Enable Data Counter	FALSE		
+Notes	TO Enable SA: 
+Notes	PUT Gravitar in Test mode
+Notes	START/STOP ON SAEN
+Notes	CLK ON SACLK
+Notes	DIPP10  2,3,4 OFF
+Notes	WDDIS TO GND
+Notes	PRESS R127 AND AUX COIN TOGETHER
+Notes	(screen turns off)
+Notes	GND SA TEST POINT (SA starts)
+	
+
+Signal	Location	Pin	Signature
+DVY12	D6	2	4347
+~DVY12	D6	3	FH13
+DVG4	D6	4	A88A
+DVG5	D6	5	2406
+~OP0	D6	6	P1A8
+OP0	D6	7	6UUF
+~LATCH1	D6	9	C794
+OP1	D6	10	U5C1
+~OP1	D6	11	7CP5
+DVG6	D6	12	144P
+DVG7	D6	13	3CC1
+~OP2	D6	14	8PC9
+OP2	D6	15	00PH
+~LATCH1	C6	1	C794
+DVX12	C6	2	CC14
+~DVX12	C6	3	3540
+Z0	C6	7	0482
+LATCH3	C6	9	1C91
+Z1	C6	10	50H7
+~Z1	C6	11	HP83
+~Z2	C6	14	8AH6
+Z2	C6	15	0482
+
+
+
+
+
+
+
+
+
+
+
+
