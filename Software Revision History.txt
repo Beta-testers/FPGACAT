@@ -125,3 +125,11 @@ You can now right click in the list of signatures and there is a menu option to 
 
 Version 2.20
 Added EAROM testing and a configuration file section for EAROM settings
+
+Version 2.30
+Added support for 6808/6802 adapter (logic update to V1.12 or higher required plus mods on older tester boards)
+The signature wizard list now auto-scrolls when you reach the bottom while running signatures
+Sequences can now write data from a file (in the same folder as the .seq file)
+Sequences can also now stream data to a single memory location (FPGA logic 1.12 or higher required) 
+Fixed some initialization issues with the outputs screen and also now outputs can change a single bit based on what has been written to that location in the past
+
