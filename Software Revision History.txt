@@ -133,3 +133,5 @@ Sequences can now write data from a file (in the same folder as the .seq file)
 Sequences can also now stream data to a single memory location (FPGA logic 1.12 or higher required) 
 Fixed some initialization issues with the outputs screen and also now outputs can change a single bit based on what has been written to that location in the past
 
+Version 2.31 
+You can now make the signature wizard not repeat the location if it is the same as the last one to save time waiting for it to speak.
