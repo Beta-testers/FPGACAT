@@ -135,3 +135,7 @@ Fixed some initialization issues with the outputs screen and also now outputs ca
 
 Version 2.31 
 You can now make the signature wizard not repeat the location if it is the same as the last one to save time waiting for it to speak.
+
+Version 2.40
+6809 Halt can now be enabled on the manual I/O screen for newer version logic (V1.12+) and hardware that has the halt/BS+BA connected (PCB 1.6+ or older boards with it wired underneath).  This is for blitter testing.
+Williams boards will now auto-disable the watchdog (Caution: the watchdog will not be disabled if the signature analyzer address count is enabled so it has the bus!)
