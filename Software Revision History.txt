@@ -139,3 +139,6 @@ You can now make the signature wizard not repeat the location if it is the same 
 Version 2.40
 6809 Halt can now be enabled on the manual I/O screen for newer version logic (V1.12+) and hardware that has the halt/BS+BA connected (PCB 1.6+ or older boards with it wired underneath).  This is for blitter testing.
 Williams boards will now auto-disable the watchdog (Caution: the watchdog will not be disabled if the signature analyzer address count is enabled so it has the bus!)
+
+Version 2.41
+Looping ROM test would not show count if there was only one ROM (i.e. sound board)  - fixed
