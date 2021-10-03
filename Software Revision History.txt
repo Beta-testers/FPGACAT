@@ -143,3 +143,4 @@ Williams boards will now auto-disable the watchdog (Caution: the watchdog will n
 Version 2.41
 Looping ROM test would not show count if there was only one ROM (i.e. sound board)  - fixed
 Fixed bug where if halt and halt timing was enabled in the manual I/O screen, exiting the screen without turning off HALT would make BS/BA high. 
+Memory files in the sequences can now be loaded from the "MemDumps" folder if the file is not found in the sequences folder
