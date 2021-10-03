@@ -1,5 +1,7 @@
 
 [SEQUENCE]
+FromFile	C000	00	Palette_C000-C00F.bin
+FromFile	0000	00	BLITTEST_0000-97FF.bin
 Write	CA02	50	
 Write	CA03	40	
 Write	CA04	28	
