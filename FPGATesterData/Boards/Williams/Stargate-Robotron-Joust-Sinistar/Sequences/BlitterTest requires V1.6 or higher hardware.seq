@@ -8,5 +8,7 @@ Write	CA04	28
 Write	CA05	40	
 Write	CA06	20	
 Write	CA07	34	
-Write	CA00	07	
+Write	CA00	07	Start the Blitter - Make sure that Enable Halt is on
+Delay_ms	0000	08	
+CRC32	0000	9800	Expect B34BE7D2
 

@@ -1,0 +1,22 @@
+
+[SEQUENCE]
+Write	C80D	30	Set CFG A to access DDRA, CA2 Output
+Write	C80C	80	A7 to outputs, all others inputs
+Write	C80D	34	Set CFG A to access the port, CA2 Output
+Write	C80C	00	Write 0 to portA
+Write	C80F	30	Set CFG B to access DDRB, CB2 Output
+Write	C80E	FF	Set DDRB to all outputs
+Write	C80F	34	Set CFG B to access the port, CB2 Output
+Write	C80E	00	Write 0 to port B
+Write	C80E	40	Write PB6 to high
+Delay_ms	0100	00	wait 256 ms
+Write	C80E	80	Write PB7 to high, PB6 low
+Delay_ms	0100	00	wait 256 ms
+Write	C80E	00	PB6 and PB7 both low
+Write	C80F	3C	CB2 High
+Delay_ms	0100	00	wait 256ms
+Write	C80F	34	CB2 Low
+Write	C80D	3C	CA2 High
+Delay_ms	0100	00	wait 256ms
+Write	C80D	34	CA2 Low
+
