@@ -1,0 +1,16 @@
+
+[SEQUENCE]
+Write	C805	00	Set CFG A to access DDRA
+Write	C804	00	Set DDRA to all inputs
+Write	C805	04	Set CFG A to access the port
+Write	C807	30	Set CFG B to access DDRB, CB2 Output
+Write	C806	00	Set DDRB to all inputs
+Write	C807	34	Set CFG B to access the port, CB2 Output Low
+ReadBits	C804	00	Read Port A
+ReadBits	C806	00	Read Port B
+Write	C807	3C	Write CB2 to High
+Comment	0000	00	SecondBank:
+ReadBits	C804	00	Read Port A Bank 2
+ReadBits	C806	00	Read Port B Bank 2
+Write	CB07	34	CB2 back to low
+
