@@ -1,5 +1,7 @@
 
 [SEQUENCE]
+Comment	0000	00	Be sure to enable halt
+Comment	0000	00	Halt Time should be about 3459
 FromFile	C000	00	Palette_C000-C00F.bin
 FromFile	0000	00	BLITTEST_0000-97FF.bin
 Write	CA02	50	

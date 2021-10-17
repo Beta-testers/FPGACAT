@@ -1,5 +1,6 @@
 
 [SEQUENCE]
+Comment	0000	00	Should flash 0-1-2-4-8-0 on the 7 Segment display
 Write	C80D	30	Set CFG A to access DDRA, CA2 Output
 Write	C80C	80	A7 to outputs, all others inputs
 Write	C80D	34	Set CFG A to access the port, CA2 Output
