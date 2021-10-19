@@ -19,4 +19,8 @@ Write	681C	00	CH2 Frequency  Middle
 Write	681D	01	CH2 Frequency  High
 Write	681E	00	CH2 Frequency  Highest
 Write	681F	0A	CH2 Volume 0-F
+Delay_ms	0300	00	Wait 0x300 ms
+Write	6815	00	Ch1 Volume 0
+Write	681A	00	Ch2 volume 0
+Write	681F	00	Ch3 volume 0
 

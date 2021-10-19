@@ -13,7 +13,7 @@ Force Write	FALSE
 Enable Address Counter	FALSE		
 Enable Data Counter	FALSE		
 Notes	136007-109.  Pin 1 not grounded
-Notes	Tester in main cpu socket or main CPU removed.
+Notes	Tester in main cpu socket or main CPU removed.  Count should be 64, A70F is all high
 
 Signal	Location	Pin	Signature
 D0	-109	12	79P9
