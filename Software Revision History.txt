@@ -144,3 +144,8 @@ Version 2.41
 Looping ROM test would not show count if there was only one ROM (i.e. sound board)  - fixed
 Fixed bug where if halt and halt timing was enabled in the manual I/O screen, exiting the screen without turning off HALT would make BS/BA high. 
 Memory files in the sequences can now be loaded from the "MemDumps" folder if the file is not found in the sequences folder
+
+Version 2.50
+Added SA probe tuning functions (Logic 1.14+ required).
+Added "negative" data delay (delays clock) for SA  (Logic V1.14+ required).
+Added "comments" and "read bits" to the sequences to output comments and read data in binary to check ports, etc.
