@@ -1,0 +1,45 @@
+Description	Williams Video Address Bus Test		
+Start	5A-8	POS	
+Stop	START	POS	
+Clock	5C-2	POS	
+Start Address	0x0000		
+End Address	0xBFFF		
+Delay	25		
+Stop to Start	TRUE		
+Clock to Phase2	FALSE		
+Start to A15	FALSE		
+NOP Mode	FALSE		
+Force Write	FALSE		
+Enable Address Counter	FALSE		
+Enable Data Counter	FALSE		
+Notes	If the counters at 5C-5F are not working then this test will not work so verify that you are getting a count of 66560 before proceeding.  Also needs decoder PROM 6
+InitSeq	Write	C900	00	
+
+Signal	Location	Pin	Signature
+VA0	5F	12	AC7H
+VA1	5F	11	F6HA
+VA2	5E	14	UU39
+VA3	5E	13	7UUU
+VA4	5E	12	UFHF
+VA5	5E	11	HPUU
+VA6	5D	14	8904
+VA7	5D	13	A65H
+VA8	5D	12	F249
+VA9	5D	11	0P3A
+VA10	5C	14	F64P
+VA11	5C	13	273U
+VA12	5C	12	248P
+VA13	5C	11	69U6
+COUNT240	4C	6	9PF7
+BLANK	4B	11	676F
+HBLANK	4B	12	513C
+VBLANK	4B	13	C884
+VP6	3C	9	1F87
+VP7	3C	10	26F3
+VP8	3C	11	U12C
+VP9	3C	13	C31U
+VP10	3C	14	9AU0
+VP11	3C	15	3P97
+VP12	3C	16	A9H2
+VP13	3C	17	CH55
+HSYNC	6C	5	1FPU
