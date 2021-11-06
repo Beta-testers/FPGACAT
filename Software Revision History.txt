@@ -149,3 +149,7 @@ Version 2.50
 Added SA probe tuning functions (Logic 1.14+ required).
 Added "negative" data delay (delays clock) for SA  (Logic V1.14+ required).
 Added "comments" and "read bits" to the sequences to output comments and read data in binary to check ports, etc.
+
+Version 2.51
+Added patterns to the sequences so you can do a ram test step by step - useful for things like writing once and reading back multiple times to see if the data is changing
+Fixed issue in battlezone draw from RAM where the scale was set to 1 instead of 0 so the timing number was off by a factor of about 2
