@@ -7,6 +7,8 @@ For AVG only
 This runs the CENTER command then halts.  
 This should reset the integrators and bring the beam to the center.  Some hardware (maybe all) resets the integrators when the state machine is idle so the beam will already be centered.
 Typical time is 89.6 us
+
+See the vector timer pulse width tests in the manual if this fails.  Note that B5 pins 5 and 6 are reversed on the Tempest schematic when doing the pulse width vector timer tests.
 [VG Halt Test]
 This runs just a single HALT instruction - check that the VG halt lights after this is run
 The halt test should run for about 2.4us on the AVG
@@ -60,9 +62,6 @@ This creates instructions which just jump to the next address.
 Specify the number of copies in the control.  
 You can use this to check that the program counters make it all the way to the end without doing any drawing.  
 It should take about 2us per copy.
-[AVG Set Scale]
-Set the linear and binary scaling factor.  
-Be sure to set bin scale to 0 if you are seeing any timing issues since if it is not zero the timing numbers will not match.
 [Set Scale]
 Set the linear and binary scaling factor.  
 Be sure to set bin scale to 0 if you are seeing any timing issues since if it is not zero the timing numbers will not match.
