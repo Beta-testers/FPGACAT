@@ -53,6 +53,7 @@ Typical 359.5us
 This will JSR to a certain address which you have to know beforehand (typically in ROM).
 0x862 is the copyright in Asteroids
 0x9F8 is the character set in Battlezone 
+0x94C is the test pattern in Space Duel 6484us
 
 NOTE: The addresses for the vector generator correspond to the 16 bit word addressthat is in the vector generator program counter.  Games with the AVG customhave 13 bit addresses (so up to 8K words or 16K bytes), and others have 12 bit addresses (up to 4K words or 8K bytes).  
 
