@@ -153,3 +153,11 @@ Added "comments" and "read bits" to the sequences to output comments and read da
 Version 2.51
 Added patterns to the sequences so you can do a ram test step by step - useful for things like writing once and reading back multiple times to see if the data is changing
 Fixed issue in battlezone draw from RAM where the scale was set to 1 instead of 0 so the timing number was off by a factor of about 2
+
+Version 2.60
+Fixed VG Draw from RAM for Major Havoc (bytes were swapped corrupting the test)
+Support for new Version 3 tester boards that have integrated power switch
+Sequences now run as a fifo operation if they are just reads and/or writes which makes them much faster
+SA can now loop the init sequence so it can be used to generate the test signals - used for Battlezone mathbox test 2 and 3
+Settings in the vector generator test screen now get remembered for each test separately
+SA settings will now be restored from where they were when returning to the SA screen
