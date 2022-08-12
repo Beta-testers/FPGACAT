@@ -1,0 +1,71 @@
+Description	Mathbox Test 1		
+Start	SAEN1	POS	
+Stop	STOP	POS	
+Clock	SACLK1	POS	
+Start Address	0x0000		
+End Address	0xFFFF		
+Delay	0		
+Stop to Start	TRUE		
+Clock to Phase2	FALSE		
+Start to A15	FALSE		
+NOP Mode	FALSE		
+Force Write	FALSE		
+Enable Address Counter	FALSE		
+Enable Data Counter	FALSE		
+Loop Init Sequence	FALSE		
+Notes	Use BNC screw terminal adapter and 20-28 inch wires for at least the clock pin with ground.   The scope probe will load the clock too much.
+Notes	Add 1K pull-up to 5V on the data pin - these tests also used a BNC screw terminal and single wire for data and pullup.
+Notes	Jumper 3-5 of the test connector to pin 1 (gnd)  Disable watchdog and reset CPU or install FPGA Cat 6502 CPU adapter.
+
+Signal	Location	Pin	Signature
+CNT0	E1	14	96PF
+CNT1	E1	13	725C
+CNT2	E1	12	P5PH
+CNT3	E1	11	5CP0
+CNT4	D1	14	7P25
+CNT5	D1	13	85PA
+CNT6	D1	12	77F7
+CNT7	D1	11	H58A
+A0	M1	9	6CF6
+A1	M1	10	F74F
+A2	M1	11	1AA2
+A3	M1	12	58A1
+A4	L1	9	34C2
+A5	L1	10	PPF6
+A6	L1	11	60H6
+A7	L1	12	05A6
+A8	K1	9	3FU4
+A9	K1	10	6989
+A10	K1	11	UC59
+A11	K1	12	96U0
+A12	J1	9	2987
+A13	J1	10	P9C1
+A14	J1	11	91HA
+A15	J1	12	26A6
+A16	H1	9	A6A3
+A17	H1	10	3CAP
+A18	H1	11	0UF0
+A19	H1	12	4PPF
+F1_9	F1	9	F515
+F1_10	F1	10	0000
+F1_11	F1	11	CPU8
+F1_12	F1	12	F765
+D5_6	D5	6	CPU8
+A10*	E5	8	45A1
+K2_8	K2	8	753F
+K2_16	K2	16	9AFH
+K2_31	K2	31	1781
+K2_34	K2	34	A1F7
+H/J2_8	H/J2	8	78AA
+H/J2_16	H/J2	16	11C5
+H/J2_33	H/J2	33	9CPP
+F2_8	F2	8	7U19
+F2_16	F2	16	11C5
+F2_33	F2	33	8631
+E/D2_8	E/D2	8	809A
+E/D2_16	E/D2	16	9AFH
+E/D2_33	E/D2	33	6PUP
+E5_11	E5	11	C646
+D3_11	D3	11	0600
+D3_6	D3	6	C4U4
+E3_8	E3	8	C835

@@ -1,0 +1,10 @@
+
+[SEQUENCE]
+WritePattern	B000	1000	
+VerifyPattern	B000	1000	
+VerifyPattern	B000	1000	
+VerifyPattern	B000	1000	
+VerifyPattern	B000	1000	
+VerifyPattern	B000	1000	
+VerifyPattern	B000	1000	
+

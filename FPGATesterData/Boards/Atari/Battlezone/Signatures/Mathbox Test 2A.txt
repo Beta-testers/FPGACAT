@@ -1,0 +1,66 @@
+Description	BZ Mathbox 2A		
+Start	SAEN 2 3	POS	
+Stop	START	NEG	
+Clock	SACLK2	POS	
+Start Address	0x0000		
+End Address	0xFFFF		
+Delay	0		
+Stop to Start	TRUE		
+Clock to Phase2	FALSE		
+Start to A15	FALSE		
+NOP Mode	FALSE		
+Force Write	FALSE		
+Enable Address Counter	FALSE		
+Enable Data Counter	FALSE		
+Loop Init Sequence	TRUE		
+Notes	With software version 2.60 or above, this test will mimic the test mode of the game so you don't have to use the game test mode - just run with the tester on the CPU
+InitSeq	Write	1840	01	
+InitSeq	Write	187F	01	
+InitSeq	Write	187E	02	
+InitSeq	Write	187D	04	
+InitSeq	Write	187C	08	
+InitSeq	Write	187B	10	
+InitSeq	Write	187A	20	
+InitSeq	Write	1879	40	
+InitSeq	Write	1878	80	
+InitSeq	Write	1877	00	
+InitSeq	Write	1876	01	
+InitSeq	Write	1875	02	
+InitSeq	Write	1874	04	
+InitSeq	Write	1873	08	
+InitSeq	Write	1872	10	
+InitSeq	Write	1871	20	
+InitSeq	Write	1870	40	
+InitSeq	Write	186F	80	
+InitSeq	Write	186E	00	
+InitSeq	Write	186D	01	
+InitSeq	Write	186C	02	
+InitSeq	Write	186B	04	
+InitSeq	Write	186A	08	
+InitSeq	Write	1869	10	
+InitSeq	Write	1868	20	
+InitSeq	Write	1867	40	
+InitSeq	Write	1866	80	
+InitSeq	Write	1865	00	
+InitSeq	Write	1864	01	
+InitSeq	Write	1863	02	
+InitSeq	Write	1862	04	
+InitSeq	Write	1861	08	
+InitSeq	Write	1860	10				
+InitSeq	Write	1840	00	
+
+Signal	Location	Pin	Signature
+EAB0	B1	10	2P61
+EAB1	B1	11	3441
+EAB2	B1	12	6UAC
+EAB3	B1	13	C4P5
+EAB4	B1	14	F722
+CE	B1	15	0000
+D0	B1	1	4FUF
+D1	B1	2	9F47
+D2	B1	3	3U53
+D3	B1	4	9569
+D4	B1	5	H8F9
+D5	B1	6	3050
+D6	B1	7	A856
+D7	B1	9	92F3

@@ -1,5 +1,6 @@
 
 [SEQUENCE]
+Write	C900	00	Switch to RAM instead of ROM!
 Comment	0000	00	Be sure to enable halt
 Comment	0000	00	Halt Time should be about 3459
 FromFile	C000	00	Palette_C000-C00F.bin

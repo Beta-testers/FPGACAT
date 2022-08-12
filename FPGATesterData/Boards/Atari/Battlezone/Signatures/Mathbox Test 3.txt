@@ -1,0 +1,60 @@
+Description	BZ Mathbox 3		
+Start	SAEN 2 3	POS	
+Stop	STOP	NEG	
+Clock	SACLK3	POS	
+Start Address	0x0000		
+End Address	0xFFFF		
+Delay	0		
+Stop to Start	TRUE		
+Clock to Phase2	FALSE		
+Start to A15	FALSE		
+NOP Mode	FALSE		
+Force Write	FALSE		
+Enable Address Counter	FALSE		
+Enable Data Counter	FALSE		
+Loop Init Sequence	TRUE		
+Notes	With software version 2.60 or above, this test will mimic the test mode of the game so you don't have to use the game test mode - just run with the tester on the CPU
+InitSeq	Write	1840	01	
+InitSeq	Write	187F	01	
+InitSeq	Write	187E	02	
+InitSeq	Write	187D	04	
+InitSeq	Write	187C	08	
+InitSeq	Write	187B	10	
+InitSeq	Write	187A	20	
+InitSeq	Write	1879	40	
+InitSeq	Write	1878	80	
+InitSeq	Write	1877	00	
+InitSeq	Write	1876	01	
+InitSeq	Write	1875	02	
+InitSeq	Write	1874	04	
+InitSeq	Write	1873	08	
+InitSeq	Write	1872	10	
+InitSeq	Write	1871	20	
+InitSeq	Write	1870	40	
+InitSeq	Write	186F	80	
+InitSeq	Write	186E	00	
+InitSeq	Write	186D	01	
+InitSeq	Write	186C	02	
+InitSeq	Write	186B	04	
+InitSeq	Write	186A	08	
+InitSeq	Write	1869	10	
+InitSeq	Write	1868	20	
+InitSeq	Write	1867	40	
+InitSeq	Write	1866	80	
+InitSeq	Write	1865	00	
+InitSeq	Write	1864	01	
+InitSeq	Write	1863	02	
+InitSeq	Write	1862	04	
+InitSeq	Write	1861	08	
+InitSeq	Write	1860	10				
+InitSeq	Write	1840	00	
+
+Signal	Location	Pin	Signature
+EDB0	D/E2	25	20P9
+EDB1	D/E2	24	1074
+EDB2	D/E2	23	883A
+EDB3	D/E2	22	441H
+EDB4	H/J2	25	A20P
+EDB5	H/J2	24	5107
+EDB6	H/J2	23	2883
+EDB7	H/J2	22	1441
