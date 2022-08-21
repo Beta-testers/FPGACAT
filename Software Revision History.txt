@@ -161,3 +161,6 @@ Sequences now run as a fifo operation if they are just reads and/or writes which
 SA can now loop the init sequence so it can be used to generate the test signals - used for Battlezone mathbox test 2 and 3
 Settings in the vector generator test screen now get remembered for each test separately
 SA settings will now be restored from where they were when returning to the SA screen
+
+Version 2.61
+Fixed a bug that caused errors when transitioning from and to the SA or IO screens when in Z80 mode 
