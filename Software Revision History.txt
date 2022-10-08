@@ -164,3 +164,6 @@ SA settings will now be restored from where they were when returning to the SA s
 
 Version 2.61
 Fixed a bug that caused errors when transitioning from and to the SA or IO screens when in Z80 mode 
+
+Version 2.62
+Cleaned up the power-up sequence for the new version tester to remove the glitch that might have caused lockups every once in a while
