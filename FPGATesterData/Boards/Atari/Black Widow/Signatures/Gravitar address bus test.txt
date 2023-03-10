@@ -1,0 +1,32 @@
+Description	Gravitar address bus		
+Start		NEG	
+Stop		NEG	
+Clock		NEG	
+Start Address	0x0000		
+End Address	0xFFFF		
+Delay	99		
+Stop to Start	TRUE		
+Clock to Phase2	TRUE		
+Start to A15	FALSE		
+NOP Mode	FALSE		
+Force Write	FALSE		
+Enable Address Counter	TRUE		
+Enable Data Counter	FALSE		
+Notes	START/STOP to R2 pin 14		
+Signal	Location	Pin	Signature
+AB0	C1	18	UUUU
+AB1	C1	16	5555
+AB2	C1	14	CCCC
+AB3	C1	12	7F7F
+AB4	C1	3	5H21
+AB5	C1	5	0AFA
+AB6	C1	7	UPFH
+AB7	C1	9	52F8
+AB8	B1	16	HC89
+AB9	B1	14	2H70
+AB10	B1	12	HPP0
+AB11	B1	7	1293
+AB12	B1	5	HAP7
+A13	R2	12	3C96
+A14	R2	13	3827
+A15	R2	14	755U

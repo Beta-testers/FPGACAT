@@ -1,0 +1,35 @@
+Description	Gravitar Vector Scaling		
+Start		NEG	
+Stop		POS	
+Clock		NEG	
+Start Address	0x0000		
+End Address	0xFFFF		
+Delay	99		
+Stop to Start	TRUE		
+Clock to Phase2	FALSE		
+Start to A15	FALSE		
+NOP Mode	FALSE		
+Force Write	FALSE		
+Enable Address Counter	FALSE		
+Enable Data Counter	FALSE		
+Notes	TO Enable SA:
+Notes	PUT Gravitar in Test mode
+Notes	START/STOP ON SAEN
+Notes	CLK ON SACLK
+Notes	DIPP10  2,3,4 OFF
+Notes	WDDIS TO GND
+Notes	PRESS R127 AND AUX COIN TOGETHER
+Notes	(screen turns off)
+Notes	GND SA TEST POINT (SA starts)
+
+Signal	Location	Pin	Signature
+NA	D7	2	5107
+DVY8	D7	4	F580
+DVY10	D7	5	H2P1
+NA	D7	10	0000
+DVY10	D7	12	H2P1
+DV9Y	D7	13	PA7F
+NA	D7	15	H397
+NA	C7	4	5P80
+NA	C7	11	65U9
+NA	C7	12	5P80
