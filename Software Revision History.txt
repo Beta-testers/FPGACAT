@@ -167,3 +167,21 @@ Fixed a bug that caused errors when transitioning from and to the SA or IO scree
 
 Version 2.62
 Cleaned up the power-up sequence for the new version tester to remove the glitch that might have caused lockups every once in a while
+
+Version 2.70  
+Added a delete button on the ROMs so you don't have to use the LabVIEW right click to delete an entry
+Added Lunar Lander to the vector generator types - The halt signal readback is inverted from Asteroids and AD so the vector generator tests were not working
+
+Version 2.71
+Fixed some display issues in the trace display (removed the ... when there is just one clock cycle in the "gap")
+Added a count and error condition to the trace acquisition system where it will now give an error if it can't get two consecutive traces to match after 6 tries
+The trace acquisition requires two matching traces to move on, and the older software would loop endlessly on a trace that was unstable
+
+Version 2.72
+Added some options for acquiring unstable traces and cleaned up the counter for unstable traces so that it will reset when switching signals
+
+Version 2.73
+When doing the trace, if reset before trace is selected the software will now first reset the VG before arming the trace acquisition.  Before it would start the trace then reset then run the program
+
+Version 2.74
+On the DVG, the reset seems to give a glitch on the halt line causing the timing to not be read.  Added a readout of the time before the reset when running a standard test
