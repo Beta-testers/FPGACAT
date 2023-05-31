@@ -1,0 +1,35 @@
+Description	DD 07xx & 00XX custom IC test 1		
+Start		POS	
+Stop		POS	
+Clock		POS	
+Start Address	0x0000		
+End Address	0xFFFF		
+Delay	99		
+Stop to Start	TRUE		
+Clock to Phase2	FALSE		
+Start to A15	FALSE		
+NOP Mode	FALSE		
+Force Write	FALSE		
+Enable Address Counter	TRUE		
+Enable Data Counter	TRUE		
+Notes	For testing 07xx sync generator at 5R and 1K, and pins 1-7 of 00xx at 7R. CLOCK to 6MHz TP, START/STOP to 5R/1K pin 13.		
+Signal	Location	Pin	Signature
+1H	07xx	2	0724
+2H	07xx	3	02P3
+4H	07xx	4	55FA
+8H	07xx	5	AUA6
+16H	07xx	6	1CC4
+32H	07xx	7	969P
+64H	07xx	8	H1C7
+128H	07xx	9	H58A
+256H	07xx	10	6PCP
+HBLANK	07xx	11	5654
+HSYNC	07xx	12	UF73
+2H	7R	1	02P3
+4H	7R	2	55FA
+8H	7R	3	AUA6
+16H	7R	4	1CC4
+32H	7R	5	969P
+64H	7R	6	H1C7
+128H	7R	7	H58A
+

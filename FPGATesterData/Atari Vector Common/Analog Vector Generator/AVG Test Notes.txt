@@ -28,6 +28,8 @@ This is useful for testing the program counters.
 It will create a certain number of copies of the drawshort commands which you can use to fill up the vector ram to check that the program counters are able to go all the way to the end.  You can start with a smaller number of copies and get bigger which will use more and more bits of the program counter. 
 For the AVG, there are 7 instructions in the drawshort BIG so there are 14 bytes in each instruction.  Battlezone has 4K vector memory so you can run 292 copies in drawshort BIG 
 For the DVG, 68 copies of the drawshort BIG is 2041 bytes, so it covers the whole RAM (68 is the max copies for asteroids, etc)
+
+For the AVG 100 copies is 17591us
 [VG Draw Single Long Vec]
 Draw a single long vector according to your inputs.
 For the 15x15 default the time is 17.6us with a bin scaling of 0
@@ -62,7 +64,8 @@ So for example 0x1000 in Star Wars is really 0x2000 in the CPU's vector memorysi
 This creates instructions which just jump to the next address.  
 Specify the number of copies in the control.  
 You can use this to check that the program counters make it all the way to the end without doing any drawing.  
-It should take about 2us per copy.
+It should take about 2us per copy with an additional 2us for the halt
+100 copies is about 200.5us
 [Set Scale]
 Set the linear and binary scaling factor.  
 Be sure to set bin scale to 0 if you are seeing any timing issues since if it is not zero the timing numbers will not match.
@@ -71,6 +74,9 @@ AVG only at this point -DVG coming soon!
 This will perform a series of JSR instructions that are nested to a certain level.  You should see numbers on the oscilloscope screen showing the jump level.  Games with the AVG custom chip can only go to 3 levels (some repros do 4), Games with discrete AVG circuits (Tempest) can do 4 levels of nesting.
 You can set the 1st JSR address to be further down in RAM since sometimes the upper-address-bits will be bad in the stack and the lower bits OK.  Just be sure you don't go past the end of RAM.
 The address here is in AVG memory space (0 is the beginning of the VG RAM)
+Nest Level 1 359us
+Nest Level 2 690us
+Nest Level 3 964us
 [Run from File]
 For this test you can load a dump of a vector memory file (in binary format) and then run it on your board.
 [Set color/intensity]

@@ -1,0 +1,31 @@
+Description	Dig Dug 07xx & 00xx custom IC test 2		
+Start		POS	
+Stop		POS	
+Clock		POS	
+Start Address	0x0000		
+End Address	0xFFFF		
+Delay	99		
+Stop to Start	TRUE		
+Clock to Phase2	FALSE		
+Start to A15	FALSE		
+NOP Mode	FALSE		
+Force Write	FALSE		
+Enable Address Counter	TRUE		
+Enable Data Counter	TRUE		
+Notes	For testing 07xx sync generator at 4C and 10B, and pins 9-13 on 00xx at 4D. CLOCK to 6MHz TP, START/STOP to 4C/10B pin 16.		
+Signal	Location	Pin	Signature
+1V	07xx	27	U415
+2V	07xx	26	0105
+4V	07xx	25	3369
+8V	07xx	24	2P3A
+16V	07xx	23	79AH
+32V	07xx	22	9U7H
+64V	07xx	21	882U
+128V	07xx	20	PF86
+VBLANK	07xx	18	7CH8
+VSYNC	07xx	17	614P
+8v	4D	9	2P3A
+16v	4D	10	79AH
+32v	4D	11	9U7H
+64v	4D	12	882U
+128v	4D	13	PF86
