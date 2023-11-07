@@ -185,3 +185,7 @@ When doing the trace, if reset before trace is selected the software will now fi
 
 Version 2.74
 On the DVG, the reset seems to give a glitch on the halt line causing the timing to not be read.  Added a readout of the time before the reset when running a standard test
+
+Version 3.00
+ Initial support for Github - there are now three categories of config files and loading files will show available files from each type
+ Under some conditions, some boards would reset when going into turbo mode so they would revert back to normal speed when opening the port - this is now fixed 
