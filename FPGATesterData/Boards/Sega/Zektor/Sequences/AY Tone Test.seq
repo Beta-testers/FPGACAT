@@ -1,0 +1,24 @@
+
+[SEQUENCE]
+Comment	0000	00	You should hear three tones, one from each channel
+IOWrite	003C	07	Select mixer register
+IOWrite	003D	F8	All channels enabled and port to output
+IOWrite	003C	01	Channel A course pitch
+IOWrite	003D	03	
+IOWrite	003C	08	Channel A volume
+IOWrite	003D	0B	volume to B
+Delay_ms	0000	500	
+IOWrite	003D	00	volume 0
+IOWrite	003C	03	channel b course pitch
+IOWrite	003D	04	
+IOWrite	003C	09	channel B volume
+IOWrite	003D	0B	
+Delay_ms	0000	500	
+IOWrite	003D	00	
+IOWrite	003C	05	channel c course pitch
+IOWrite	003D	06	
+IOWrite	003C	0A	channel c volume
+IOWrite	003D	0B	
+Delay_ms	0000	500	
+IOWrite	003D	00	
+
