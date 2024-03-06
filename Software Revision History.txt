@@ -189,3 +189,4 @@ On the DVG, the reset seems to give a glitch on the halt line causing the timing
 Version 3.00
  Initial support for Github - there are now three categories of config files and loading files will show available files from each type
  Under some conditions, some boards would reset when going into turbo mode so they would revert back to normal speed when opening the port - this is now fixed 
+ Fixed an issue where when the memory sequence had no reads but only writes (like on the dig dug sound test), it would report a failure because the fifo was trying to be read when it was empty.
