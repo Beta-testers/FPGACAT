@@ -188,5 +188,12 @@ On the DVG, the reset seems to give a glitch on the halt line causing the timing
 
 Version 3.00
  Initial support for Github - there are now three categories of config files and loading files will show available files from each type
+ Git commits are supported to the community repository which can be pulled by anyone using the software
  Under some conditions, some boards would reset when going into turbo mode so they would revert back to normal speed when opening the port - this is now fixed 
  Fixed an issue where when the memory sequence had no reads but only writes (like on the dig dug sound test), it would report a failure because the fifo was trying to be read when it was empty.
+ The load buttons now tell you how many files are available to load
+ Memory file writes and reads now report their status
+
+Version 3.01
+ Browse option added when loading a config file - this will let you load a config that is not in the standard folders and will prompt for board and manufacturer info and copy it into the personal folder structure
+ Added sound on error and stop on error options to the RAM test.
