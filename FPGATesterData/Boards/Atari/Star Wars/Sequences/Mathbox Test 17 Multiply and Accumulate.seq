@@ -1,0 +1,16 @@
+
+[SEQUENCE]
+Comment	0000	00	Connect data probe to 8H pin 9  Pos PW should be 4.7
+Write	4702	00	clear bic
+Write	4701	00	clear bic
+Write	5018	55	High Register A
+Write	5019	55	Low Register A
+Write	501A	00	High Register B
+Write	501B	00	Low Register B
+Write	501C	40	High Register C
+Write	501D	00	Low Register C
+Write	4700	5D	Run Test program to run MAC
+Delay_ms	0001	00	Wait to allow mathbox to finish
+Read	5000	00	expect 0x55
+Read	5001	00	expect 0x55
+

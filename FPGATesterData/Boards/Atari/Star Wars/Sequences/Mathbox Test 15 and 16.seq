@@ -1,0 +1,20 @@
+
+[SEQUENCE]
+Comment	0000	00	Connect data probe to 8H pin 9  Pos PW should be 1.1
+Write	4702	00	clear bic
+Write	4701	00	clear bic
+Write	5000	55	
+Write	5001	55	
+Write	5002	00	
+Write	5003	00	
+Write	4700	5C	Run Test program to load accumulator and read back
+Read	FFFF	00	Dummy read in ROM to allow mathbox to finish
+Read	5002	00	expect 0x55
+Read	5003	00	expect 0x55
+Write	5000	AA	
+Write	5001	AA	
+Write	4700	5C	Run Test program to load accumulator and read back
+Read	FFFF	00	Dummy read in ROM to allow mathbox to finish
+Read	5002	00	expect 0xAA
+Read	5003	00	expect 0xAA
+
