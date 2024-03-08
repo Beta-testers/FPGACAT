@@ -197,3 +197,6 @@ Version 3.00
 Version 3.01
  Browse option added when loading a config file - this will let you load a config that is not in the standard folders and will prompt for board and manufacturer info and copy it into the personal folder structure
  Added sound on error and stop on error options to the RAM test.
+
+Version 3.02
+ Some cleanup to clear the I/O screen when clearing a config.
