@@ -1,0 +1,39 @@
+
+[SEQUENCE]
+Comment	0000	00	This duplicates the self test divider tests
+Write	4706	40	Store 1 in the numerator
+Write	4707	00	
+Write	4704	40	Store 1 in the denominator
+Write	4705	00	Start the divider
+Delay_ms	0000	01	
+Read	4700	00	expect 0x40
+Read	4701	00	expect 0x00
+Write	4706	55	Store 5555 in the numerator
+Write	4707	55	
+Write	4704	40	Store 1 in the denominator
+Write	4705	00	Start the divider
+Delay_ms	0000	01	
+Read	4700	00	expect 0x55
+Read	4701	00	expect 0x55
+Write	4706	2A	Store 2AAA in the numerator
+Write	4707	AA	
+Write	4704	40	Store 1 in the denominator
+Write	4705	00	Start the divider
+Delay_ms	0000	01	
+Read	4700	00	expect 0x2A
+Read	4701	00	expect 0xAA
+Write	4706	2A	Store 2AAA in the numerator
+Write	4707	AA	
+Write	4704	2A	Store 2AAA in the denominator
+Write	4705	AA	Start the divider
+Delay_ms	0000	01	
+Read	4700	00	expect 0x40
+Read	4701	00	expect 0x00
+Write	4706	55	Store 5555 in the numerator
+Write	4707	55	
+Write	4704	55	Store 5555 in the denominator
+Write	4705	55	Start the divider
+Delay_ms	0000	01	
+Read	4700	00	expect 0x40
+Read	4701	00	expect 0x00
+
