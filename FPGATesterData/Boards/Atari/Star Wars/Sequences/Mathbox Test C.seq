@@ -1,0 +1,25 @@
+
+[SEQUENCE]
+Comment	0000	00	Connect data probe to 8H pin 9  Pos PW should be 4.7
+Comment	0000	00	This duplicates test "C" in the self test code
+Write	4702	00	clear bic
+Write	4701	00	clear bic
+Write	5018	1B	High Register A
+Write	5019	2C	Low Register A
+Write	501A	00	High Register B
+Write	501B	00	Low Register B
+Write	501C	40	High Register C
+Write	501D	00	Low Register C
+Write	4700	5D	CLEARS ACCUM. AND PUTS 1B2C IN ACCUM
+Delay_ms	0001	00	Wait to allow mathbox to finish
+Write	5018	19	High Register A
+Write	5019	6A	Low Register A
+Write	501A	00	High Register B
+Write	501B	00	Low Register B
+Write	501C	40	High Register C
+Write	501D	00	Low Register C
+Write	4700	5E	ADDS 196A TO ACCUM.
+Delay_ms	0001	00	Wait to allow mathbox to finish
+Read	5000	00	expect 0x34
+Read	5001	00	expect 0x96
+
