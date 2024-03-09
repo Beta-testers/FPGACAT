@@ -200,3 +200,5 @@ Version 3.01
 
 Version 3.02
  Some cleanup to clear the I/O screen when clearing a config.
+ Fixed the "stop on error" function of the RAM test
+ Changed the error sound on the RAM test
