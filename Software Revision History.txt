@@ -209,3 +209,6 @@ Version 3.03
   Added a selection filter to the load dialog to select which types are shown (official, community, personal)
   After updating from the official repository, the software will check this revision history file to see if a new version is available
   Added copy to clipboard and open in browser button to get to the google drive for updated software.
+
+Version 3.04
+  Fixed a bug where it would require you to accept the license terms each time you started the software instead of just once
