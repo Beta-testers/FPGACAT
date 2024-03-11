@@ -212,3 +212,6 @@ Version 3.03
 
 Version 3.04
   Fixed a bug where it would require you to accept the license terms each time you started the software instead of just once
+
+Version 3.05
+  Fixed a bug where the inputs would not show up properly on the I/O tab
