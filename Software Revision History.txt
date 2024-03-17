@@ -215,3 +215,8 @@ Version 3.04
 
 Version 3.05
   Fixed a bug where the inputs would not show up properly on the I/O tab
+
+Version 3.06
+  When clearing the vector generator trace, the type always got set to analog - changed to reflect the proper vg type of the current config
+  Writing a vector assembly file would give an error and not let you select a new file - fixed
+  Added a button to show the revision history on the git tab
