@@ -1,0 +1,11 @@
+
+[SEQUENCE]
+Write	2001	30	Set CFG A to access DDRA
+Write	2000	00	Port A all inputs
+Write	2001	34	Set CFG A to access the port
+Write	2000	7F	Write midscale to portA
+Write	2003	30	Set CFG B to access DDRB
+Write	2002	FF	Set DDRB to all outputs
+Write	2003	34	Set CFG B to access the port
+FromFile1	2002	00	Tone.bin
+
