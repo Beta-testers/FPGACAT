@@ -223,4 +223,5 @@ Version 3.06
 
 Version 3.07
   The software could not find a memory file if it was used as part of the board init sequences.  This was needed for tac/scan and star trek - will now default to the proper place based on where the config was loaded
-  
+  When loading memory from a file in a sequence, the software will now try harder to find the file by searching in the personal or official folders if it can't be found where expected
+  Maximum delay in a sequence increased from 1 second to 10 seconds
