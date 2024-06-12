@@ -220,3 +220,7 @@ Version 3.06
   When clearing the vector generator trace, the type always got set to analog - changed to reflect the proper vg type of the current config
   Writing a vector assembly file would give an error and not let you select a new file - fixed
   Added a button to show the revision history on the git tab
+
+Version 3.07
+  The software could not find a memory file if it was used as part of the board init sequences.  This was needed for tac/scan and star trek - will now default to the proper place based on where the config was loaded
+  
