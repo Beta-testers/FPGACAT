@@ -1,0 +1,40 @@
+
+[SEQUENCE]
+IOWrite	003F	FF	Reset Sound Board
+FromFile	D000	1000	StarTrek_SoundCode D000-DFFF.bin
+IOWrite	003F	7F	Release sound board reset
+Delay_ms	0000	300	
+Comment	0000	00	Targeting
+IOWrite	003F	0E	
+Delay_ms	0000	A00	
+Comment	0000	00	Shields Hit
+IOWrite	003F	12	
+Delay_ms	0000	A00	
+Comment	0000	00	Enterprise Hit
+IOWrite	003F	14	
+Delay_ms	0000	A00	
+Comment	0000	00	Star Base Hit
+IOWrite	003F	1E	
+Delay_ms	0000	A00	
+Comment	0000	00	Saucer Warp Suck
+IOWrite	003F	18	
+Delay_ms	0000	A00
+IOWrite	003F	2F
+Delay_ms	0000	400	
+Comment	0000	00	Saucer Exit
+IOWrite	003F	19	
+Delay_ms	0000	A00
+IOWrite	003F	2F
+Delay_ms	0000	400	
+Comment	0000	00	Nomad Moving
+IOWrite	003F	2C	
+Delay_ms	0000	A00
+IOWrite	003F	21
+Delay_ms	0000	400	
+Comment	0000	00	Nomad Stopped
+IOWrite	003F	2D	
+Delay_ms	0000	A00
+IOWrite	003F	21
+Delay_ms	0000	400	
+IOWrite	003F	FF	Reset Sound Board
+IOWrite	003F	7F	Release sound board reset

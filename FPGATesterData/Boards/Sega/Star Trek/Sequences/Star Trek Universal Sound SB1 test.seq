@@ -1,0 +1,28 @@
+
+[SEQUENCE]
+IOWrite	003F	FF	Reset Sound Board
+FromFile	D000	1000	StarTrek_SoundCode D000-DFFF.bin
+IOWrite	003F	7F	Release sound board reset
+Delay_ms	0000	300	
+Comment	0000	00	Phasor
+IOWrite	003F	08	
+Delay_ms	0000	A00	
+Comment	0000	00	Red Alert
+IOWrite	003F	0C	
+Delay_ms	0000	A00	
+IOWrite	003F	0D	
+Delay_ms	0000	400	
+Comment	0000	00	Deny
+IOWrite	003F	10	
+Delay_ms	0000	A00	
+Comment	0000	00	Star Base Red
+IOWrite	003F	11	
+Delay_ms	0000	A00	
+Comment	0000	00	Small Bonus
+IOWrite	003F	24	
+Delay_ms	0000	A00	
+Comment	0000	00	Large Bonus
+IOWrite	003F	25	
+Delay_ms	0000	A00	
+IOWrite	003F	FF	Reset Sound Board
+IOWrite	003F	7F	Release sound board reset

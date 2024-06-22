@@ -1,0 +1,25 @@
+
+[SEQUENCE]
+IOWrite	003F	FF	Reset Sound Board
+FromFile	D000	1000	StarTrek_SoundCode D000-DFFF.bin
+IOWrite	003F	7F	Release sound board reset
+Delay_ms	0000	300	
+Comment	0000	00	Impulse Drive Sound
+IOWrite	003F	04	
+Delay_ms	0000	A00	
+IOWrite	003F	05	
+Delay_ms	0000	400	
+Comment	0000	00	Warp Drive Sound
+IOWrite	003F	06	
+Delay_ms	0000	A00	
+IOWrite	003F	07	
+Delay_ms	0000	400	
+Comment	0000	00	Photon Torpedo
+IOWrite	003F	0A	
+Delay_ms	0000	A00	
+Comment	0000	00	Player Change
+IOWrite	003F	29	
+Delay_ms	0000	A00	
+IOWrite	003F	FF	Reset Sound Board
+IOWrite	003F	7F	Release sound board reset
+
