@@ -15,12 +15,12 @@ IOWrite	003F	22
 Delay_ms	0000	A00	
 Comment	0000	00	Star Base Introduction
 IOWrite	003F	26	
-Delay_ms	0000	A00	
+Delay_ms	0000	D00	
 Comment	0000	00	Klingon Introduction
 IOWrite	003F	27	
-Delay_ms	0000	A00	
+Delay_ms	0000	D00	
 Comment	0000	00	Enterprise Introduction
 IOWrite	003F	28	
-Delay_ms	0000	A00	
+Delay_ms	0000	D00	
 IOWrite	003F	FF	Reset Sound Board
 IOWrite	003F	7F	Release sound board reset
