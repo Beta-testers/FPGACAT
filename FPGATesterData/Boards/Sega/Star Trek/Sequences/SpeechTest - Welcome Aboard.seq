@@ -1,0 +1,13 @@
+
+[SEQUENCE]
+IOWrite	003B	28	
+IOWrite	003B	28	
+IOWrite	0038	3F	
+IOWrite	0038	BF	
+IOWrite	0038	0A	
+IOWrite	0038	8A	
+IOWrite	0038	08	
+IOWrite	0038	88	
+IOWrite	0038	03	
+IOWrite	0038	83	
+

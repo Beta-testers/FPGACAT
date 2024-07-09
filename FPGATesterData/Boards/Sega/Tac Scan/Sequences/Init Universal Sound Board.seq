@@ -1,0 +1,6 @@
+
+[SEQUENCE]
+IOWrite	003F	FF	Reset Sound Board
+FromFile	D000	1000	TacScan_SoundCodeD000-DFFF.bin
+IOWrite	003F	7F	Release sound board reset
+
