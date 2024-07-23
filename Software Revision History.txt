@@ -226,3 +226,6 @@ Version 3.07
   When loading memory from a file in a sequence, the software will now try harder to find the file by searching in the personal or official folders if it can't be found where expected
   Maximum delay in a sequence increased from 1 second to 10 seconds
   Comments in the sequences will now show up "live" when they happen, rather at the end when the sequence completes
+
+Version 3.08
+  Fixed a bug where the folders would be messed up when re-saving a config file after saving it the first time.  This bug was present in all of the git-enabled versions.
