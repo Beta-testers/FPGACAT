@@ -235,3 +235,7 @@ Version 3.09
   When the com port is closed and a new device is added, the com port will now automatically change if the current setting is not a valid com port.  
   So for the first time the tester is used you can just plug in the tester after starting the software and the com port will auto-set
   Fixed the handling of some older versions of the logic, plus put some logic version read indicators to debug an issue where the software thinks the board is an older version
+
+Version 3.10
+  Fixed an issue where anyone with a comma as the decimal separator for their locale (i.e. Europe) would cause the version of the logic to be read incorrectly in some parts of the software. 
+  This would disable several features like "previous pulse width" and make all of the timing indicators (pulse width, etc) be off by a factor of 4 because the software would think it was talking with an older version of the hardware.
