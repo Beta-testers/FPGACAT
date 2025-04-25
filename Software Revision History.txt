@@ -229,3 +229,9 @@ Version 3.07
 
 Version 3.08
   Fixed a bug where the folders would be messed up when re-saving a config file after saving it the first time.  This bug was present in all of the git-enabled versions.
+
+Version 3.09
+  Added an "nv" memory option that will save the contents of ram and restore it after the RAM test - useful for attempting to preserving settings and scores in non volatile RAM (see new Robotron config)
+  When the com port is closed and a new device is added, the com port will now automatically change if the current setting is not a valid com port.  
+  So for the first time the tester is used you can just plug in the tester after starting the software and the com port will auto-set
+  Fixed the handling of some older versions of the logic, plus put some logic version read indicators to debug an issue where the software thinks the board is an older version
