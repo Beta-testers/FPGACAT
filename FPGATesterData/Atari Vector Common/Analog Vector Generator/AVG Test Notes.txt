@@ -74,7 +74,7 @@ AVG only at this point -DVG coming soon!
 This will perform a series of JSR instructions that are nested to a certain level.  You should see numbers on the oscilloscope screen showing the jump level.  Games with the AVG custom chip can only go to 3 levels (some repros do 4), Games with discrete AVG circuits (Tempest) can do 4 levels of nesting.
 You can set the 1st JSR address to be further down in RAM since sometimes the upper-address-bits will be bad in the stack and the lower bits OK.  Just be sure you don't go past the end of RAM.
 The address here is in AVG memory space (0 is the beginning of the VG RAM)
-Nest Level 1 359us
+Nest Level 1 359us (possibly 481.6 on games with AVG custom chip?)
 Nest Level 2 690us
 Nest Level 3 964us
 [Run from File]
