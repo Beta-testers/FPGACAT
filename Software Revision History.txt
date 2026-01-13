@@ -239,3 +239,11 @@ Version 3.09
 Version 3.10
   Fixed an issue where anyone with a comma as the decimal separator for their locale (i.e. Europe) would cause the version of the logic to be read incorrectly in some parts of the software. 
   This would disable several features like "previous pulse width" and make all of the timing indicators (pulse width, etc) be off by a factor of 4 because the software would think it was talking with an older version of the hardware.
+
+Version 3.11
+  The list of boards when loading a config will now be sorted so boards are easier to find.
+  When executing a sequence, an error will be printed to the results if a file is not found that is called out in the sequence
+  The RAM test error listing now keeps track of each address so when "keep errors" is checked the errors will be listed once for each address but any error at that address will be kept
+  The RAM test now has a graphical display of the results so you can look for patterns that would be caused by addressing issues (address bit stuck low or high or shorted etc.)
+  Some of the tabs will not automatically disappear if they are not relevant to the board you are working with (Vector generator, Video, EAROM)
+  There would sometimes be an intermittent buffer overflow error when reading large blocks of RAM like in the Robotron config that reads 48K at once.  The software will now retry the read if this happens
