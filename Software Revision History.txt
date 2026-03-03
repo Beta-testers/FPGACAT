@@ -247,3 +247,9 @@ Version 3.11
   The RAM test now has a graphical display of the results so you can look for patterns that would be caused by addressing issues (address bit stuck low or high or shorted etc.)
   Some of the tabs will not automatically disappear if they are not relevant to the board you are working with (Vector generator, Video, EAROM)
   There would sometimes be an intermittent buffer overflow error when reading large blocks of RAM like in the Robotron config that reads 48K at once.  The software will now retry the read if this happens
+
+Version 3.12
+  When using "repeat" on the manual I/O screen, the logic probe and pulse width displays would freeze.  These are now updated while in repeat mode
+  In the config file load dialog, if the right window was scrolled down previously it would look blank if a folder with fewer files was selected.  Now it will scroll to the beginning.
+  When selecting a non configuration file to load, the file types (community, official, personal) are all now all enabled by default.
+  Fixed a bug in the file selection dialog where if there were no files to show and a browse window was shown to select a file, it would act like you cancelled even if you selected a file.
