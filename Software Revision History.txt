@@ -260,5 +260,5 @@ Version 3.13  - This version supports the new V1.16 logic which is required to u
   The signature generation on the hardware has been extended to 32 bits with the lower 16 bits matching the original signatures.  For now this is just displayed but it might be integrated further in the software in the future.
   The data counter for signature mode (for RAM and write tests) is now the inverted address count so that the data signals can be distinguished from the address lines. 
   In the I/O sequence if the words "enable halt" are in a comment, then enable halt and time halt will be enabled without requiring you to switch them on (Williams blitter test)
-  For both the RAM and ROM options, you can now define preseq=sequencename.seq  and/or postseq=sequencename.seq and it will run those sequences before and/or after the test of that RAM or ROM
+  For both the RAM and ROM options, you can now define preseq=sequencename.seq  and/or postseq=sequencename.seq in the options list and it will run those sequences before and/or after the test of that RAM or ROM
 
