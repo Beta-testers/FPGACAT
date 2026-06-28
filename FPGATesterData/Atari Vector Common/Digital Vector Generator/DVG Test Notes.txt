@@ -19,6 +19,7 @@ Don't forget to disable the watchdog since it will reset the vector generator du
 [VG DrawShort from Ram]
 Draw some short vectors (an asteroid) on the screen then halt
 Typically 637.5 microseconds with a global scale of 0
+Lunar Lander - 340.9
 [VG Draw from RAM]
 This draws the test grid and intensity bars from Asteroids.  Typical time is 9838us
 [VG Draw Single Short Vec frm Ram]
@@ -37,7 +38,7 @@ This is useful for testing the program counters.
 It will create a certain number of copies of the drawshort commands which you can use to fill up the vector ram to check that the program counters are able to go all the way to the end.  You can start with a smaller number of copies and get bigger which will use more and more bits of the program counter. 
 For the DVG, 68 copies of the drawshort BIG is 2041 bytes, so it covers the whole RAM (68 is the max copies for asteroids, etc)
 
-1 copy takes about 637.5us
+1 copy takes about 637.5us (Lunar Lander - 340.9)
 [VG Draw Single Long Vec]
 Draw a single long vector according to your inputs.
 This will overdrive a monitor so don't run any of these tests with a monitor connected especially this one!
@@ -56,7 +57,7 @@ scale Time (us) (should be within about .2us of these numbers)
 9    685.18
 [VG JMP test RAM]
 This jumps around a few times to check the loading of the program counters.  
-Typical 1893us
+Typical 1893us (Lunar Lander - 1003)
 [VG JSR to address]
 This will JSR to a certain address which you have to know beforehand (typically in ROM).
 0x862 is the copyright in Asteroids
